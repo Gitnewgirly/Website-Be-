@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- RECOMMANDATION APPLIQUÉE : SEO — Meta tags optimisés pour le référencement -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="B.E. 360 - Agence de medical copywriting dirigée par des docteurs en pharmacie. Rédaction médicale, vulgarisation scientifique, SEO santé et conformité réglementaire.">
+    <meta name="keywords" content="medical copywriting, rédaction médicale, vulgarisation scientifique, SEO santé, pharmacie, contenu médical, communication santé">
+    <meta name="author" content="B.E. 360">
+    <meta property="og:title" content="B.E. 360 | Medical Copywriting Expert">
+    <meta property="og:description" content="La science au service du bien-être. Experts en rédaction médicale et vulgarisation scientifique.">
+    <meta property="og:type" content="website">
+    <title>B.E. 360 | Medical Copywriting Expert</title>
+    <!-- RECOMMANDATION APPLIQUÉE : Performance — Preconnect aux ressources externes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600;700&family=Fraunces:opsz,wght@9..144,400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --color-primary: #0F2C4C; --color-primary-light: #1A456D; --color-accent: #5B9B8E; --color-accent-hover: #4A8B7F; --color-bg-light: #F8F9FA; --color-bg-white: #FFFFFF; --color-text-dark: #1A1A2E; --color-text-medium: #4A4A5E; --color-text-light: #7A7A8E; --color-border: #E5E7EB; --font-heading: 'Fraunces', serif; --font-body: 'DM Sans', sans-serif; --spacing-xs: 0.5rem; --spacing-sm: 1rem; --spacing-md: 2rem; --spacing-lg: 4rem; --spacing-xl: 6rem; --border-radius-sm: 8px; --border-radius-md: 12px; --border-radius-lg: 20px; --shadow-sm: 0 2px 8px rgba(15, 44, 76, 0.06); --shadow-md: 0 4px 16px rgba(15, 44, 76, 0.1); --shadow-lg: 0 8px 32px rgba(15, 44, 76, 0.12); --transition: all 0.3s ease; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); color: var(--color-text-dark); background-color: var(--color-bg-white); line-height: 1.6; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 600; line-height: 1.2; color: var(--color-primary); }
+        p { color: var(--color-text-medium); margin-bottom: var(--spacing-sm); }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        img { max-width: 100%; height: auto; display: block; }
+        ul { list-style: none; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-md); }
+        .section { padding: var(--spacing-xl) 0; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto var(--spacing-lg); }
+        .section-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--spacing-sm); }
+        .section-subtitle { font-size: 1.125rem; color: var(--color-text-light); }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--spacing-xs); padding: 0.875rem 2rem; font-family: var(--font-body); font-weight: 600; font-size: 1rem; border-radius: var(--border-radius-sm); cursor: pointer; transition: var(--transition); border: 2px solid transparent; }
+        .btn-primary { background-color: var(--color-accent); color: white; }
+        .btn-primary:hover { background-color: var(--color-accent-hover); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .btn-secondary { background-color: transparent; color: var(--color-primary); border-color: var(--color-primary); }
+        .btn-secondary:hover { background-color: var(--color-primary); color: white; transform: translateY(-2px); }
+        .card { background: var(--color-bg-white); border-radius: var(--border-radius-md); padding: var(--spacing-md); box-shadow: var(--shadow-sm); transition: var(--transition); border: 1px solid var(--color-border); }
+        .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        /* RECOMMANDATION APPLIQUÉE : Accessibilité — Focus visible amélioré */
+        .btn:focus, .form-input:focus, .form-select:focus, .form-textarea:focus, .social-link:focus, .nav-link:focus { outline: 3px solid var(--color-accent); outline-offset: 2px; }
+        .header { position: fixed; top: 0; left: 0; right: 0; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid var(--color-border); transition: var(--transition); }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-sm) var(--spacing-md); max-width: 1200px; margin: 0 auto; }
+        .logo { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: var(--spacing-xs); }
+        .logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--color-accent), var(--color-primary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem; }
+        .nav-links { display: flex; gap: var(--spacing-md); align-items: center; }
+        .nav-link { font-weight: 500; color: var(--color-text-medium); position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background-color: var(--color-accent); transition: var(--transition); }
+        .nav-link:hover { color: var(--color-primary); }
+        .nav-link:hover::after { width: 100%; }
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: var(--spacing-xs); }
+        .mobile-menu-btn span { display: block; width: 24px; height: 2px; background-color: var(--color-primary); margin: 5px 0; transition: var(--transition); }
+        
+        /* Hero Slider Styles */
+        .hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding-top: 80px; overflow: hidden; }
+        .hero-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+        .hero-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1.5s ease-in-out; }
+        .hero-slide.active { opacity: 1; }
+        .hero-slide img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(15, 44, 76, 0.7) 0%, rgba(26, 69, 109, 0.5) 100%); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; max-width: 700px; }
+        .hero-badge { display: inline-block; background-color: rgba(91, 155, 142, 0.9); color: white; padding: var(--spacing-xs) var(--spacing-sm); border-radius: 50px; font-weight: 600; font-size: 0.875rem; margin-bottom: var(--spacing-md); }
+        .hero-title { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: var(--spacing-md); color: white; }
+        .hero-subtitle { font-size: 1.25rem; color: rgba(255, 255, 255, 0.9); margin-bottom: var(--spacing-lg); line-height: 1.7; }
+        .hero-cta { display: flex; gap: var(--spacing-sm); flex-wrap: wrap; }
+        .hero-cta .btn-secondary { color: white; border-color: white; }
+        .hero-cta .btn-secondary:hover { background-color: white; color: var(--color-primary); }
+        .hero-stats { display: flex; gap: var(--spacing-lg); margin-top: var(--spacing-xl); padding-top: var(--spacing-lg); border-top: 1px solid rgba(255, 255, 255, 0.2); }
+        .stat-item { text-align: left; }
+        .stat-number { font-family: var(--font-heading); font-size: 2rem; font-weight: 700; color: var(--color-accent); display: block; }
+        .stat-label { font-size: 0.875rem; color: rgba(255, 255, 255, 0.8); }
+        .slider-controls { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; gap: var(--spacing-sm); align-items: center; }
+        .slider-dots { display: flex; gap: 12px; }
+        .slider-dot { width: 12px; height: 12px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.4); cursor: pointer; transition: var(--transition); border: none; }
+        .slider-dot.active { background-color: var(--color-accent); transform: scale(1.2); }
+        .slider-arrow { width: 44px; height: 44px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.2); border: 2px solid rgba(255, 255, 255, 0.5); cursor: pointer; transition: var(--transition); display: flex; align-items: center; justify-content: center; }
+        .slider-arrow:hover { background-color: rgba(255, 255, 255, 0.3); }
+        .slider-arrow svg { width: 20px; height: 20px; stroke: white; }
+        
+        .why-us { background-color: var(--color-bg-white); }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md); }
+        .feature-card { text-align: center; padding: var(--spacing-lg) var(--spacing-md); }
+        .feature-image { width: 100%; height: 180px; object-fit: cover; border-radius: var(--border-radius-md); margin-bottom: var(--spacing-md); }
+        .feature-number { font-family: var(--font-heading); font-size: 3rem; font-weight: 700; color: var(--color-accent); opacity: 0.3; line-height: 1; margin-bottom: var(--spacing-sm); }
+        .feature-title { font-size: 1.25rem; margin-bottom: var(--spacing-xs); color: var(--color-primary); }
+        .feature-text { font-size: 0.95rem; color: var(--color-text-light); }
+        .about { background-color: var(--color-bg-light); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); align-items: center; }
+        .about-image { position: relative; border-radius: var(--border-radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
+        .about-image img { width: 100%; height: 400px; object-fit: cover; }
+        .about-content h2 { font-size: 2.5rem; margin-bottom: var(--spacing-md); }
+        .about-list { margin: var(--spacing-md) 0; }
+        .about-list li { display: flex; align-items: flex-start; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm); color: var(--color-text-medium); }
+        .about-list svg { width: 20px; height: 20px; stroke: var(--color-accent); flex-shrink: 0; margin-top: 2px; }
+        .services { background-color: var(--color-bg-white); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-md); }
+        .service-card { padding: var(--spacing-lg); text-align: left; }
+        .service-image { width: 100%; height: 200px; object-fit: cover; border-radius: var(--border-radius-md); margin-bottom: var(--spacing-md); }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: var(--spacing-sm); }
+        .service-link { display: inline-flex; align-items: center; gap: var(--spacing-xs); color: var(--color-accent); font-weight: 600; margin-top: var(--spacing-sm); }
+        .service-link:hover { gap: var(--spacing-sm); }
+        .service-link svg { width: 18px; height: 18px; stroke: var(--color-accent); transition: var(--transition); }
+        .blog { background-color: var(--color-bg-light); }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--spacing-md); }
+        .blog-card { padding: 0; overflow: hidden; }
+        .blog-image { height: 200px; overflow: hidden; }
+        .blog-image img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .blog-card:hover .blog-image img { transform: scale(1.05); }
+        .blog-content { padding: var(--spacing-md); }
+        .blog-category { display: inline-block; background-color: rgba(91, 155, 142, 0.1); color: var(--color-accent); padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; margin-bottom: var(--spacing-xs); }
+        .blog-card h3 { font-size: 1.25rem; margin-bottom: var(--spacing-xs); }
+        .blog-excerpt { font-size: 0.95rem; color: var(--color-text-light); margin-bottom: var(--spacing-sm); }
+        .contact { background: linear-gradient(135deg, var(--color-primary) 0%, #1A456D 100%); color: white; }
+        .contact .section-title, .contact .section-subtitle { color: white; }
+        .contact .section-subtitle { opacity: 0.8; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); align-items: start; }
+        .contact-info h3 { color: white; font-size: 1.75rem; margin-bottom: var(--spacing-md); }
+        .contact-details { margin: var(--spacing-lg) 0; }
+        .contact-item { display: flex; align-items: flex-start; gap: var(--spacing-sm); margin-bottom: var(--spacing-md); }
+        .contact-item svg { width: 24px; height: 24px; stroke: var(--color-accent); flex-shrink: 0; }
+        .contact-item p { color: rgba(255, 255, 255, 0.8); margin: 0; }
+        .social-links { display: flex; gap: var(--spacing-sm); }
+        .social-link { width: 44px; height: 44px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; transition: var(--transition); }
+        .social-link:hover { background-color: var(--color-accent); }
+        .social-link svg { width: 20px; height: 20px; stroke: white; }
+        .contact-form { background-color: white; padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg); }
+        .form-group { margin-bottom: var(--spacing-md); }
+        .form-label { display: block; font-weight: 600; color: var(--color-primary); margin-bottom: var(--spacing-xs); font-size: 0.95rem; }
+        .form-input, .form-select, .form-textarea { width: 100%; padding: 0.875rem 1rem; border: 2px solid var(--color-border); border-radius: var(--border-radius-sm); font-family: var(--font-body); font-size: 1rem; transition: var(--transition); background-color: var(--color-bg-light); }
+        .form-input:focus, .form-select:focus, .form-textarea:focus { outline: none; border-color: var(--color-accent); background-color: white; }
+        .form-textarea { resize: vertical; min-height: 120px; }
+        .form-submit { width: 100%; padding: 1rem; background-color: var(--color-accent); color: white; border: none; border-radius: var(--border-radius-sm); font-family: var(--font-body); font-weight: 600; font-size: 1rem; cursor: pointer; transition: var(--transition); }
+        .form-submit:hover { background-color: var(--color-accent-hover); transform: translateY(-2px); }
+        .footer { background-color: var(--color-primary); color: white; padding: var(--spacing-xl) 0 var(--spacing-lg); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); }
+        .footer-brand p { color: rgba(255, 255, 255, 0.7); margin-top: var(--spacing-sm); font-size: 0.95rem; }
+        .footer-title { color: white; font-size: 1.1rem; margin-bottom: var(--spacing-md); }
+        .footer-links { display: flex; flex-direction: column; gap: var(--spacing-xs); }
+        .footer-link { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; }
+        .footer-link:hover { color: var(--color-accent); }
+        .footer-bottom { padding-top: var(--spacing-lg); border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-sm); }
+        .footer-copyright { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; }
+        .footer-legal { display: flex; gap: var(--spacing-md); }
+        .footer-legal a { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; }
+        .footer-legal a:hover { color: var(--color-accent); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        @media (max-width: 992px) { .about-grid, .contact-grid { grid-template-columns: 1fr; } .about-image { order: -1; } .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 768px) { .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background-color: white; flex-direction: column; padding: var(--spacing-md); box-shadow: var(--shadow-md); gap: var(--spacing-sm); } .nav-links.active { display: flex; } .mobile-menu-btn { display: block; } .hero-stats { flex-direction: column; gap: var(--spacing-md); } .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; text-align: center; } .slider-controls { bottom: 20px; } }
+        @media (max-width: 480px) { .hero-cta { flex-direction: column; } .btn { width: 100%; } }
+    </style>
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">BE</div>
+                B.E. 360
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#apropos" class="nav-link">À propos</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="btn btn-primary">Prendre RDV</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section avec Slider -->
+    <section class="hero" id="accueil">
+        <div class="hero-slider">
+            <!-- Slide 1 -->
+            <div class="hero-slide active">
+                <img src="https://images.unsplash.com/photo-1576091160550-217358c7e618?w=1920&q=80" alt="Recherche médicale et laboratoire" loading="eager">
+            </div>
+            <!-- Slide 2 -->
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920&q=80" alt="Équipe médicale en réunion" loading="lazy">
+            </div>
+            <!-- Slide 3 -->
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=1920&q=80" alt="Documentation scientifique et rédaction" loading="lazy">
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content fade-in">
+            <span class="hero-badge">Experts en Medical Copywriting</span>
+            <h1 class="hero-title">Transformez votre expertise médicale en contenus impactants</h1>
+            <p class="hero-subtitle">Gagnez du temps et gagnez en fiabilité. Nos docteurs en pharmacie rédigent, révisent et optimisent vos contenus santé avec une rigueur scientifique absolue et une conformité réglementaire garantie. Livrables en FR, EN, ES.</p>
+            <div class="hero-cta">
+                <a href="#services" class="btn btn-primary">Découvrir nos services</a>
+                <a href="#contact" class="btn btn-secondary">Prendre rendez-vous</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Rédigé par des docteurs en pharmacie</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Langues disponibles (FR, EN, ES)</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Conforme</span>
+                    <span class="stat-label">Exigences ANSM/EMA</span>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-arrow" id="prevSlide" aria-label="Slide précédente">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <div class="slider-dots" id="sliderDots"></div>
+            <button class="slider-arrow" id="nextSlide" aria-label="Slide suivante">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Section Pourquoi Nous Choisir -->
+    <section class="section why-us fade-in">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pourquoi choisir B.E. 360 ?</h2>
+                <p class="section-subtitle">Une expertise unique au service de votre communication santé</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80" alt="Expertise pharmaceutique" class="feature-image" loading="lazy">
+                    <h3 class="feature-title">Expertise Pharmaceutique</h3>
+                    <p class="feature-text">100% de nos contenus sont rédigés par des docteurs en pharmacie diplômés</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Conformité réglementaire" class="feature-image" loading="lazy">
+                    <h3 class="feature-title">Conformité Garantie</h3>
+                    <p class="feature-text">Respect strict des exigences ANSM, EMA et réglementations en vigueur</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Multilinguisme" class="feature-image" loading="lazy">
+                    <h3 class="feature-title">Approche Multilingue</h3>
+                    <p class="feature-text">Livrables professionnels en français, anglais et espagnol</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" alt="Rigueur scientifique" class="feature-image" loading="lazy">
+                    <h3 class="feature-title">Rigueur Scientifique</h3>
+                    <p class="feature-text">Chaque affirmation est sourcée et vérifiée selon les dernières publications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section class="section about fade-in" id="apropos">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Équipe B.E. 360 en réunion" loading="lazy">
+                </div>
+                <div class="about-content">
+                    <h2>Des experts à votre service</h2>
+                    <p>B.E. 360 est une agence de medical copywriting fondée et dirigée par des docteurs en pharmacie. Notre mission : rendre la science accessible sans jamais compromettre la rigueur.</p>
+                    <p>Nous accompagnons les laboratoires pharmaceutiques, les startups healthtech, les institutions de santé et les médias spécialisés dans la création de contenus précis, conformes et engageants.</p>
+                    <ul class="about-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Expertise scientifique validée par des doctorats en pharmacie</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Adaptation du ton selon votre cible (grand public, professionnels, patients)</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Optimisation SEO pour une visibilité maximale sur les moteurs de recherche</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Respect des délais et confidentialité garantie</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Travailler avec nous</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services -->
+    <section class="section services fade-in" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos Services</h2>
+                <p class="section-subtitle">Quatre offres complémentaires pour tous vos besoins en communication santé</p>
+            </div>
+            <div class="services-grid">
+                <div class="card service-card">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" alt="Vulgarisation scientifique" class="service-image" loading="lazy">
+                    <h3>Vulgarisation scientifique</h3>
+                    <p>Transformation de concepts complexes en contenus accessibles pour le grand public, les patients ou vos équipes commerciales.</p>
+                    <a href="#contact" class="service-link">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+                <div class="card service-card">
+                    <img src="https://images.unsplash.com/photo-1456324504439-367cee1b093a?w=600&q=80" alt="Révision et édition scientifique" class="service-image" loading="lazy">
+                    <h3>Révision et édition scientifique</h3>
+                    <p>Vérification, correction et amélioration de vos textes existants pour garantir exactitude, clarté et conformité réglementaire.</p>
+                    <a href="#contact" class="service-link">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+                <div class="card service-card">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Consultation en stratégie de communication" class="service-image" loading="lazy">
+                    <h3>Consultation en stratégie de communication</h3>
+                    <p>Accompagnement personnalisé pour définir votre ligne éditoriale, identifier vos cibles et structurer vos messages clés.</p>
+                    <a href="#contact" class="service-link">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+                <div class="card service-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Contenu Web SEO santé" class="service-image" loading="lazy">
+                    <h3>Contenu Web SEO santé</h3>
+                    <p>Rédaction d'articles de blog, pages de site et newsletters optimisés pour le référencement naturel et l'engagement lecteur.</p>
+                    <a href="#contact" class="service-link">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Blog -->
+    <section class="section blog fade-in" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Notre Blog</h2>
+                <p class="section-subtitle">Articles et insights sur le medical copywriting et la communication santé</p>
+            </div>
+            <div class="blog-grid">
+                <article class="card blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" alt="SEO et santé" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">SEO Santé</span>
+                        <h3>Comment optimiser vos contenus médicaux pour Google sans compromettre la rigueur scientifique ?</h3>
+                        <p class="blog-excerpt">Découvrez les meilleures pratiques pour concilier référencement naturel et exactitude médicale dans vos publications web.</p>
+                        <a href="article-1.html" class="btn btn-secondary">Lire la suite</a>
+                    </div>
+                </article>
+                <article class="card blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-217358c7e618?w=600&q=80" alt="Vulgarisation scientifique" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Vulgarisation</span>
+                        <h3>Les 5 erreurs à éviter quand on vulgarise un concept médical complexe</h3>
+                        <p class="blog-excerpt">Apprenez à rendre la science accessible sans tomber dans la simplification excessive ou la perte de précision.</p>
+                        <a href="article-2.html" class="btn btn-secondary">Lire la suite</a>
+                    </div>
+                </article>
+                <article class="card blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Conformité réglementaire" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Réglementation</span>
+                        <h3>Communication santé : comment respecter les exigences ANSM et EMA en 2025 ?</h3>
+                        <p class="blog-excerpt">Guide pratique pour naviguer dans le paysage réglementaire européen et français de la communication médicale.</p>
+                        <a href="article-3.html" class="btn btn-secondary">Lire la suite</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="section contact fade-in" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Parlons de votre projet</h2>
+                <p class="section-subtitle">Contactez-nous pour un devis personnalisé ou une première consultation</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Une question ? Un besoin spécifique ?</h3>
+                    <p>Nos experts sont à votre écoute pour comprendre vos enjeux et vous proposer la solution la plus adaptée.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <p>Be.health.360@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <p>Paris, France</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nom complet *</label>
+                        <input type="text" id="name" name="name" class="form-input" required placeholder="Votre nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email professionnel *</label>
+                        <input type="email" id="email" name="email" class="form-input" required placeholder="vous@entreprise.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="service" class="form-label">Type de besoin *</label>
+                        <select id="service" name="service" class="form-select" required>
+                            <option value="">Sélectionnez un service</option>
+                            <option value="vulgarisation">Vulgarisation scientifique</option>
+                            <option value="revision">Révision et édition scientifique</option>
+                            <option value="consultation">Consultation en stratégie de communication</option>
+                            <option value="seo">Contenu Web SEO santé</option>
+                            <option value="autre">Autre demande</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" name="message" class="form-textarea" required placeholder="Décrivez votre projet, vos objectifs et votre deadline..."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Envoyer ma demande</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">BE</div>
+                        B.E. 360
+                    </div>
+                    <p>La science au service du bien-être. Experts en medical copywriting dirigés par des docteurs en pharmacie.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#accueil" class="footer-link">Accueil</a></li>
+                        <li><a href="#apropos" class="footer-link">À propos</a></li>
+                        <li><a href="#services" class="footer-link">Services</a></li>
+                        <li><a href="#blog" class="footer-link">Blog</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services" class="footer-link">Vulgarisation scientifique</a></li>
+                        <li><a href="#services" class="footer-link">Révision & édition</a></li>
+                        <li><a href="#services" class="footer-link">Stratégie de communication</a></li>
+                        <li><a href="#services" class="footer-link">Contenu Web SEO</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:Be.health.360@gmail.com" class="footer-link">Be.health.360@gmail.com</a></li>
+                        <li><span class="footer-link">Paris, France</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 B.E. 360. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Fade-in Animation on Scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Hero Slider Functionality
+        const slides = document.querySelectorAll('.hero-slide');
+        const sliderDots = document.getElementById('sliderDots');
+        const prevBtn = document.getElementById('prevSlide');
+        const nextBtn = document.getElementById('nextSlide');
+        let currentSlide = 0;
+        let slideInterval;
+
+        // Create dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.classList.add('slider-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.setAttribute('aria-label', `Aller au slide ${index + 1}`);
+            dot.addEventListener('click', () => goToSlide(index));
+            sliderDots.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.slider-dot');
+
+        function updateSlider() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                dots[index].classList.remove('active');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                    dots[index].classList.add('active');
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            updateSlider();
+            resetInterval();
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            updateSlider();
+            resetInterval();
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            updateSlider();
+            resetInterval();
+        }
+
+        function startInterval() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            startInterval();
+        }
+
+        // Event listeners for slider controls
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Start automatic sliding
+        startInterval();
+
+        // Pause on hover
+        const heroSection = document.querySelector('.hero');
+        heroSection.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        heroSection.addEventListener('mouseleave', startInterval);
+
+        // Contact Form Handling
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation feedback
+            alert('Merci pour votre message ! Nous vous répondrons sous 48 heures ouvrées.');
+            contactForm.reset();
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
