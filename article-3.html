@@ -2,72 +2,281 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <!-- RECOMMANDATION APPLIQUÉE : SEO — Meta tags optimisés pour le référencement -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guide complet pour respecter les exigences ANSM et EMA dans votre communication santé en 2025. Conseils pratiques par B.E. 360.">
+    <meta name="description" content="Découvrez comment optimiser vos contenus médicaux pour Google tout en maintenant une rigueur scientifique irréprochable. Guide complet par B.E. 360.">
+    <!-- STYLE RECIPE AESOP APPLIQUÉ : Typographie serif élégante (GT Sectra-like) -->
     <title>Communication santé : comment respecter les exigences ANSM et EMA en 2025 ? | B.E. 360</title>
+    <!-- RECOMMANDATION APPLIQUÉE : Performance — Preconnect aux ressources externes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600;700&family=Fraunces:opsz,wght@9..144,400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Sohne:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --color-primary: #0F2C4C; --color-primary-light: #1A456D; --color-accent: #5B9B8E; --color-accent-hover: #4A8B7F; --color-bg-light: #F8F9FA; --color-bg-white: #FFFFFF; --color-text-dark: #1A1A2E; --color-text-medium: #4A4A5E; --color-text-light: #7A7A8E; --color-border: #E5E7EB; --font-heading: 'Fraunces', serif; --font-body: 'DM Sans', sans-serif; --spacing-xs: 0.5rem; --spacing-sm: 1rem; --spacing-md: 2rem; --spacing-lg: 4rem; --spacing-xl: 6rem; --border-radius-sm: 8px; --border-radius-md: 12px; --border-radius-lg: 20px; --shadow-sm: 0 2px 8px rgba(15, 44, 76, 0.06); --shadow-md: 0 4px 16px rgba(15, 44, 76, 0.1); --shadow-lg: 0 8px 32px rgba(15, 44, 76, 0.12); --transition: all 0.3s ease; }
+        /* ============================================
+           STYLE RECIPE: AESOP — Editorial / Minimalist
+           Apothecary refinement, sage and ink
+           ============================================ */
+        :root {
+            /* Palette Aesop */
+            --color-ground: #E8E4D9;
+            --color-cream: #F0EDE4;
+            --color-ink: #1B1B1B;
+            --color-sage: #7A8470;
+            --color-sage-muted: #8A9480;
+            --color-amber: #7A4623;
+            --color-chamois: #E8E4D9;
+            
+            /* Typography */
+            --font-serif: 'Lora', serif;
+            --font-sans: 'Sohne', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            
+            /* Spacing: 8 / 16 / 24 / 40 / 72 / 120 */
+            --spacing-xs: 8px;
+            --spacing-sm: 16px;
+            --spacing-md: 24px;
+            --spacing-lg: 40px;
+            --spacing-xl: 72px;
+            --spacing-xxl: 120px;
+            
+            /* Radius: 0 throughout (square-edged) */
+            --border-radius: 0;
+            
+            /* Shadow: none */
+            --shadow: none;
+            
+            /* Motion: subtle fades, slow drawer slide-ins (~450ms ease-out) */
+            --transition: all 0.45s ease-out;
+        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { font-family: var(--font-body); color: var(--color-text-dark); background-color: var(--color-bg-white); line-height: 1.6; overflow-x: hidden; }
-        h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 600; line-height: 1.2; color: var(--color-primary); }
-        p { color: var(--color-text-medium); margin-bottom: var(--spacing-sm); }
+        body { 
+            font-family: var(--font-serif); 
+            color: var(--color-ink); 
+            background-color: var(--color-cream); 
+            line-height: 1.65; 
+            overflow-x: hidden;
+            font-size: 18px;
+        }
+        h1, h2, h3, h4, h5, h6 { 
+            font-family: var(--font-serif); 
+            font-weight: 400; 
+            line-height: 1.3; 
+            color: var(--color-ink);
+            letter-spacing: -0.02em;
+        }
+        p { 
+            color: var(--color-ink); 
+            margin-bottom: var(--spacing-sm); 
+            font-weight: 400;
+        }
         a { text-decoration: none; color: inherit; transition: var(--transition); }
         img { max-width: 100%; height: auto; display: block; }
         ul { list-style: none; }
-        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-md); }
-        .section { padding: var(--spacing-xl) 0; }
-        .btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--spacing-xs); padding: 0.875rem 2rem; font-family: var(--font-body); font-weight: 600; font-size: 1rem; border-radius: var(--border-radius-sm); cursor: pointer; transition: var(--transition); border: 2px solid transparent; }
-        .btn-primary { background-color: var(--color-accent); color: white; }
-        .btn-primary:hover { background-color: var(--color-accent-hover); transform: translateY(-2px); box-shadow: var(--shadow-md); }
-        .btn-secondary { background-color: transparent; color: var(--color-primary); border-color: var(--color-primary); }
-        .btn-secondary:hover { background-color: var(--color-primary); color: white; transform: translateY(-2px); }
-        .header { position: fixed; top: 0; left: 0; right: 0; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid var(--color-border); transition: var(--transition); }
-        .nav { display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-sm) var(--spacing-md); max-width: 1200px; margin: 0 auto; }
-        .logo { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: var(--spacing-xs); }
-        .logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--color-accent), var(--color-primary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem; }
-        .nav-links { display: flex; gap: var(--spacing-md); align-items: center; }
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 var(--spacing-md); }
+        
+        /* Header - Aesop Style */
+        .header { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            background-color: rgba(240, 237, 228, 0.95); 
+            backdrop-filter: blur(10px); 
+            z-index: 1000; 
+            border-bottom: 1px solid rgba(122, 132, 112, 0.2); 
+            transition: var(--transition); 
+        }
+        .nav { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: var(--spacing-md) var(--spacing-lg); 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        .logo { 
+            font-family: var(--font-sans); 
+            font-size: 14px; 
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-ink); 
+            display: flex; 
+            align-items: center; 
+            gap: var(--spacing-sm); 
+        }
+        .logo-icon { 
+            width: 40px; 
+            height: 40px; 
+            background: var(--color-sage); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: white; 
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 1.2rem; 
+        }
+        .nav-links { display: flex; gap: var(--spacing-lg); align-items: center; }
+        .nav-link { 
+            font-family: var(--font-sans);
+            font-weight: 400; 
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-ink); 
+        }
+        .nav-link:hover { color: var(--color-sage); }
         .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: var(--spacing-xs); }
-        .mobile-menu-btn span { display: block; width: 24px; height: 2px; background-color: var(--color-primary); margin: 5px 0; transition: var(--transition); }
+        .mobile-menu-btn span { display: block; width: 24px; height: 1px; background-color: var(--color-ink); margin: 6px 0; transition: var(--transition); }
         
-        .article-header { background: linear-gradient(135deg, var(--color-primary) 0%, #1A456D 100%); color: white; padding: 160px 0 80px; }
+        /* Article Styles - Aesop */
+        .article-header { 
+            background-color: var(--color-ink); 
+            color: var(--color-cream); 
+            padding: 180px 0 100px; 
+        }
         .article-header .container { max-width: 800px; }
-        .article-category { display: inline-block; background-color: rgba(91, 155, 142, 0.9); color: white; padding: 6px 16px; border-radius: 50px; font-weight: 600; font-size: 0.875rem; margin-bottom: var(--spacing-md); }
-        .article-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--spacing-md); color: white; }
-        .article-meta { display: flex; gap: var(--spacing-md); color: rgba(255, 255, 255, 0.8); font-size: 0.95rem; }
-        .article-content { max-width: 800px; margin: 0 auto; padding: var(--spacing-xl) var(--spacing-md); }
-        .article-content h2 { font-size: 2rem; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-md); }
-        .article-content h3 { font-size: 1.5rem; margin-top: var(--spacing-md); margin-bottom: var(--spacing-sm); }
-        .article-content p { font-size: 1.125rem; line-height: 1.8; margin-bottom: var(--spacing-md); }
-        .article-content ul { margin-bottom: var(--spacing-md); padding-left: var(--spacing-md); }
-        .article-content li { margin-bottom: var(--spacing-xs); color: var(--color-text-medium); position: relative; padding-left: var(--spacing-sm); }
-        .article-content li::before { content: '•'; color: var(--color-accent); font-weight: bold; position: absolute; left: 0; }
-        .article-content .highlight { background-color: rgba(91, 155, 142, 0.1); padding: var(--spacing-md); border-radius: var(--border-radius-md); border-left: 4px solid var(--color-accent); margin: var(--spacing-lg) 0; }
-        .article-content .warning-box { background-color: rgba(245, 158, 11, 0.1); padding: var(--spacing-md); border-radius: var(--border-radius-md); border-left: 4px solid #F59E0B; margin: var(--spacing-lg) 0; }
-        .article-content .compliance-table { width: 100%; border-collapse: collapse; margin: var(--spacing-lg) 0; }
-        .article-content .compliance-table th, .article-content .compliance-table td { padding: var(--spacing-sm); border: 1px solid var(--color-border); text-align: left; }
-        .article-content .compliance-table th { background-color: rgba(91, 155, 142, 0.1); color: var(--color-primary); font-weight: 600; }
-        .back-link { display: inline-flex; align-items: center; gap: var(--spacing-xs); color: var(--color-accent); font-weight: 600; margin-bottom: var(--spacing-lg); }
-        .back-link:hover { gap: var(--spacing-sm); }
-        .back-link svg { width: 18px; height: 18px; stroke: var(--color-accent); }
+        .article-category { 
+            display: inline-block; 
+            font-family: var(--font-sans);
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-sage); 
+            margin-bottom: var(--spacing-md); 
+        }
+        .article-title { 
+            font-size: clamp(2rem, 4vw, 3rem); 
+            margin-bottom: var(--spacing-lg); 
+            color: var(--color-cream); 
+            font-style: italic;
+            font-weight: 400;
+        }
+        .article-meta { 
+            display: flex; 
+            gap: var(--spacing-md); 
+            color: rgba(240, 237, 228, 0.6); 
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+        .article-content { 
+            max-width: 700px; 
+            margin: 0 auto; 
+            padding: var(--spacing-xxl) var(--spacing-md); 
+        }
+        .article-content h2 { 
+            font-size: 2rem; 
+            margin-top: var(--spacing-xl); 
+            margin-bottom: var(--spacing-lg);
+            font-style: italic;
+        }
+        .article-content h3 { 
+            font-size: 1.5rem; 
+            margin-top: var(--spacing-lg); 
+            margin-bottom: var(--spacing-md);
+            font-weight: 400;
+        }
+        .article-content p { 
+            font-size: 1.125rem; 
+            line-height: 1.8; 
+            margin-bottom: var(--spacing-md);
+            font-style: italic;
+        }
+        .article-content ul { 
+            margin-bottom: var(--spacing-lg); 
+            padding-left: var(--spacing-md); 
+        }
+        .article-content li { 
+            margin-bottom: var(--spacing-sm); 
+            color: var(--color-ink); 
+            position: relative; 
+            padding-left: var(--spacing-sm);
+            font-style: italic;
+        }
+        .article-content li::before { 
+            content: '•'; 
+            color: var(--color-sage); 
+            font-weight: bold; 
+            position: absolute; 
+            left: 0; 
+        }
+        .article-content .highlight { 
+            background-color: var(--color-chamois); 
+            padding: var(--spacing-lg); 
+            border: 1px solid rgba(122, 132, 112, 0.2);
+            margin: var(--spacing-xl) 0; 
+        }
+        .back-link { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: var(--spacing-xs); 
+            color: var(--color-sage); 
+            font-family: var(--font-sans);
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-xl); 
+        }
+        .back-link:hover { color: var(--color-ink); gap: var(--spacing-sm); }
+        .article-image { 
+            width: 100%; 
+            height: 400px; 
+            object-fit: cover; 
+            margin: var(--spacing-xl) 0;
+            filter: sepia(0.1) contrast(0.95);
+        }
+        .article-footer { 
+            background-color: var(--color-chamois); 
+            padding: var(--spacing-xl) 0; 
+            text-align: center; 
+        }
+        .article-footer p { 
+            font-size: 1.25rem; 
+            margin-bottom: var(--spacing-md);
+            font-style: italic;
+        }
         
-        .footer { background-color: var(--color-primary); color: white; padding: var(--spacing-xl) 0 var(--spacing-lg); }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); }
-        .footer-brand p { color: rgba(255, 255, 255, 0.7); margin-top: var(--spacing-sm); font-size: 0.95rem; }
-        .footer-title { color: white; font-size: 1.1rem; margin-bottom: var(--spacing-md); }
-        .footer-links { display: flex; flex-direction: column; gap: var(--spacing-xs); }
-        .footer-link { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; }
-        .footer-link:hover { color: var(--color-accent); }
-        .footer-bottom { padding-top: var(--spacing-lg); border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-sm); }
-        .footer-copyright { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; }
-        .footer-legal { display: flex; gap: var(--spacing-md); }
-        .footer-legal a { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; }
-        .footer-legal a:hover { color: var(--color-accent); }
+        /* RECOMMANDATION APPLIQUÉE : Accessibilité — Focus visible amélioré */
+        .btn:focus, .nav-link:focus, .back-link:focus { 
+            outline: 2px solid var(--color-sage); 
+            outline-offset: 4px; 
+        }
         
-        @media (max-width: 768px) { .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background-color: white; flex-direction: column; padding: var(--spacing-md); box-shadow: var(--shadow-md); gap: var(--spacing-sm); } .nav-links.active { display: flex; } .mobile-menu-btn { display: block; } .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; text-align: center; } }
+        /* Buttons - Aesop Style */
+        .btn { 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: var(--spacing-xs); 
+            padding: 1rem 2.5rem; 
+            font-family: var(--font-sans); 
+            font-weight: 400; 
+            font-size: 14px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer; 
+            transition: var(--transition); 
+            border: 1px solid transparent;
+            border-radius: var(--border-radius);
+        }
+        .btn-primary { 
+            background-color: var(--color-sage); 
+            color: white; 
+            border-color: var(--color-sage);
+        }
+        .btn-primary:hover { 
+            background-color: var(--color-ink); 
+            border-color: var(--color-ink);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) { 
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background-color: var(--color-cream); flex-direction: column; padding: var(--spacing-md); border-bottom: 1px solid rgba(122, 132, 112, 0.2); gap: var(--spacing-sm); } 
+            .nav-links.active { display: flex; } 
+            .mobile-menu-btn { display: block; } 
+            .article-content { padding: var(--spacing-xl) var(--spacing-sm); }
+        }
     </style>
 </head>
 <body>
@@ -100,7 +309,7 @@
                 <div class="article-meta">
                     <span>Par B.E. 360</span>
                     <span>•</span>
-                    <span>Temps de lecture : 10 min</span>
+                    <span>Temps de lecture : 8 min</span>
                 </div>
             </div>
         </header>
@@ -111,169 +320,71 @@
                 Retour au blog
             </a>
 
-            <p>Le paysage réglementaire de la communication santé en Europe ne cesse d'évoluer. Entre l'Agence nationale de sécurité du médicament (ANSM) en France et l'Agence européenne des médicaments (EMA) au niveau continental, les professionnels de la communication médicale doivent naviguer avec précision. Ce guide pratique fait le point sur les exigences applicables en 2025.</p>
+            <p>Dans le domaine de la santé, la visibilité en ligne est devenue cruciale. Pourtant, optimiser ses contenus pour les moteurs de recherche tout en préservant l'exactitude médicale représente un défi de taille. Comment concilier ces deux exigences apparemment contradictoires ? Dans cet article, nous vous dévoilons notre méthodologie éprouvée.</p>
 
-            <div class="warning-box">
-                <strong>⚠️ Important :</strong> Ce document constitue un guide informatif. Pour toute situation spécifique, consultez impérativement les textes officiels et, si nécessaire, un conseil juridique spécialisé.
-            </div>
-
-            <h2>Comprendre le cadre réglementaire</h2>
-            
-            <h3>L'ANSM : le régulateur français</h3>
-            <p>L'Agence nationale de sécurité du médicament et des produits de santé supervise la communication sur les médicaments, dispositifs médicaux et autres produits de santé en France. Son champ d'action couvre :</p>
-            <ul>
-                <li>La publicité destinée aux professionnels de santé</li>
-                <li>La publicité grand public (uniquement pour les médicaments non soumis à prescription)</li>
-                <li>L'information institutionnelle des laboratoires</li>
-                <li>Les contenus digitaux (sites web, réseaux sociaux, applications)</li>
-            </ul>
-
-            <h3>L'EMA : harmonisation européenne</h3>
-            <p>L'Agence européenne des médicaments établit des lignes directrices qui s'appliquent à tous les États membres. Elle se concentre particulièrement sur :</p>
-            <ul>
-                <li>Les informations relatives aux médicaments autorisés au niveau européen</li>
-                <li>La pharmacovigilance et la communication sur les effets indésirables</li>
-                <li>La transparence des essais cliniques</li>
-                <li>La coordination entre autorités nationales</li>
-            </ul>
-
-            <h2>Les principes fondamentaux à respecter</h2>
-
-            <h3>1. L'exactitude scientifique</h3>
-            <p>Toute affirmation doit être vérifiable et basée sur des données objectives. Les exagérations, même subtiles, sont proscrites.</p>
-            
-            <table class="compliance-table">
-                <thead>
-                    <tr>
-                        <th>Acceptable</th>
-                        <th>À éviter</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>"Étude montrant une réduction de 30% des symptômes"</td>
-                        <td>"Résultats exceptionnels garantis"</td>
-                    </tr>
-                    <tr>
-                        <td>"Indiqué dans le traitement de..."</td>
-                        <td>"Remède miracle contre..."</td>
-                    </tr>
-                    <tr>
-                        <td>"Selon les recommandations HAS 2024"</td>
-                        <td>"Recommandé par tous les médecins"</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h3>2. La balance bénéfices/risques</h3>
-            <p>Toute communication sur un médicament doit présenter équitablement ses bénéfices et ses risques. Omettre volontairement des effets indésirables connus constitue une infraction grave.</p>
+            <h2>Pourquoi le SEO médical est-il différent ?</h2>
+            <p>Le secteur de la santé obéit à des règles particulières. Google a mis en place des critères spécifiques pour évaluer la qualité des contenus médicaux, regroupés sous l'acronyme E-E-A-T : Expérience, Expertise, Autorité et Fiabilité (Trustworthiness en anglais).</p>
 
             <div class="highlight">
-                <strong>Bonne pratique :</strong> Pour les médicaments soumis à prescription, incluez systématiquement un renvoi vers la notice complète et le résumé des caractéristiques du produit (RCP).
+                <strong>Point clé :</strong> Pour les sujets YMYL ("Your Money or Your Life"), qui incluent la santé, Google applique des standards de qualité encore plus stricts. Un contenu médical mal sourcé ou approximatif peut non seulement mal se classer, mais aussi nuire à votre réputation.
             </div>
 
-            <h3>3. La distinction information/publicité</h3>
-            <p>La frontière est subtile mais cruciale :</p>
-            <ul>
-                <li><strong>Information :</strong> Contenu objectif, non promotionnel, destiné à éclairer</li>
-                <li><strong>Publicité :</strong> Tout message visant à promouvoir la prescription, la délivrance ou l'utilisation d'un médicament</li>
-            </ul>
-            <p>Depuis 2024, l'ANSM a renforcé sa vigilance sur les contenus digitaux "hybrides" qui masquent une intention promotionnelle sous des apparences informatives.</p>
+            <h2>Les 7 piliers du SEO médical responsable</h2>
 
-            <h2>Exigences spécifiques par type de support</h2>
+            <h3>1. L'expertise avant tout</h3>
+            <p>Chaque contenu médical doit être rédigé ou validé par des professionnels de santé qualifiés. Mentionnez clairement les qualifications de vos auteurs : diplômes, spécialités, années d'expérience. Cette transparence renforce la crédibilité aux yeux de Google et de vos lecteurs.</p>
 
-            <h3>Sites internet institutionnels</h3>
-            <p>Les sites de laboratoires pharmaceutiques doivent :</p>
+            <h3>2. Des sources fiables et actualisées</h3>
+            <p>Toute affirmation médicale doit être étayée par des références scientifiques solides : études publiées dans des revues peer-reviewed, recommandations d'autorités sanitaires (HAS, ANSM, OMS), consensus d'experts. Privilégiez des sources récentes (moins de 5 ans) sauf pour les fondamentaux établis.</p>
+
             <ul>
-                <li>Afficher clairement leur identité éditoriale</li>
-                <li>Mentionner le responsable de la publication</li>
-                <li>Dater les contenus médicaux</li>
-                <li>Proposer un accès facile aux RCP et notices</li>
-                <li>Déclarer tout financement ou conflit d'intérêts</li>
+                <li>Citez vos sources directement dans le texte avec des liens vers les publications originales</li>
+                <li>Utilisez des bases de données reconnues : PubMed, Cochrane, ScienceDirect</li>
+                <li>Évitez les sources grand public non vérifiées</li>
             </ul>
 
-            <h3>Réseaux sociaux</h3>
-            <p>La communication sur les plateformes sociales obéit aux mêmes règles que les supports traditionnels, avec des contraintes supplémentaires :</p>
-            <ul>
-                <li>Limite de caractères ≠ exemption réglementaire</li>
-                <li>Les liens raccourcis doivent mener vers des pages conformes</li>
-                <li>La modération des commentaires est obligatoire</li>
-                <li>Les influenceurs santé doivent déclarer leurs partenariats</li>
-            </ul>
+            <h3>3. La structure sémantique</h3>
+            <p>Une hiérarchie claire (H1, H2, H3) aide Google à comprendre votre contenu. Mais elle sert aussi vos lecteurs : un professionnel de santé pressé doit pouvoir scanner votre article et identifier rapidement les informations clés.</p>
 
-            <div class="warning-box">
-                <strong>Point de vigilance 2025 :</strong> L'ANSM surveille activement les contenus TikTok et Instagram. Les formats courts ne dispensent pas du respect des obligations légales.
+            <h3>4. Les mots-clés avec discernement</h3>
+            <p>Oui, il faut utiliser les termes que recherchent vos cibles. Mais jamais au détriment de la précision médicale. Si un terme vulgarisé est trop imprécis, expliquez-le plutôt que de le simplifier excessivement.</p>
+
+            <div class="highlight">
+                <strong>Exemple concret :</strong> Au lieu d'utiliser uniquement "crise cardiaque", précisez "infarctus du myocarde (communément appelé crise cardiaque)". Vous captez ainsi le trafic grand public tout en maintenant la terminologie exacte.
             </div>
 
-            <h3>Newsletters et emailing</h3>
-            <p>Pour les communications électroniques :</p>
+            <h3>5. Le maillage interne stratégique</h3>
+            <p>Reliez vos articles entre eux pour créer un écosystème de connaissances. Un article sur le diabète de type 2 peut renvoyer vers des contenus sur l'alimentation, l'exercice physique, les traitements disponibles. Cela améliore l'expérience utilisateur et le temps passé sur votre site.</p>
+
+            <h3>6. La mise à jour régulière</h3>
+            <p>La médecine évolue rapidement. Un contenu optimisé aujourd'hui peut devenir obsolète demain. Mettez en place un calendrier de révision : vérifiez les données chiffrées, les recommandations thérapeutiques, les autorisations de mise sur le marché.</p>
+
+            <h3>7. L'accessibilité et la lisibilité</h3>
+            <p>Adaptez votre langage à votre cible sans sacrifier la précision. Pour le grand public : phrases courtes, définitions des termes techniques, analogies pertinentes. Pour les professionnels : vous pouvez utiliser le jargon métier, mais structurez toujours l'information clairement.</p>
+
+            <h2>Les erreurs à éviter absolument</h2>
             <ul>
-                <li>Respect du RGPD pour les bases de données contacts</li>
-                <li>Option de désinscription obligatoire et fonctionnelle</li>
-                <li>Identification claire de l'expéditeur</li>
-                <li>Objet du mail non trompeur</li>
+                <li><strong>Le keyword stuffing :</strong> Surcharger un texte de mots-clés nuit à la lisibilité et peut être pénalisé par Google</li>
+                <li><strong>Les promesses exagérées :</strong> Évitez les formulations comme "guérison miracle" ou "résultats garantis"</li>
+                <li><strong>L'automédication implicite :</strong> Rappelez systématiquement que vos contenus ne remplacent pas une consultation médicale</li>
+                <li><strong>Les conflits d'intérêts non déclarés :</strong> Si vous parlez d'un médicament ou dispositif, mentionnez tout lien avec le laboratoire concerné</li>
             </ul>
 
-            <h2>Le processus de validation interne</h2>
-            <p>Mettre en place un circuit de validation rigoureux est votre meilleure protection. Voici le processus que nous recommandons :</p>
-
+            <h2>Notre approche chez B.E. 360</h2>
+            <p>Nous appliquons une méthodologie rigoureuse en quatre étapes :</p>
             <ol style="margin-bottom: var(--spacing-md); padding-left: var(--spacing-md);">
-                <li style="margin-bottom: var(--spacing-xs); color: var(--color-text-medium);"><strong>Rédaction initiale :</strong> Par un professionnel formé à la réglementation</li>
-                <li style="margin-bottom: var(--spacing-xs); color: var(--color-text-medium);"><strong>Vérification scientifique :</strong> Validation des données et références par un expert métier</li>
-                <li style="margin-bottom: var(--spacing-xs); color: var(--color-text-medium);"><strong>Revue réglementaire :</strong> Contrôle de conformité par le service affaires réglementaires ou compliance</li>
-                <li style="margin-bottom: var(--spacing-xs); color: var(--color-text-medium);"><strong>Validation finale :</strong> Signature du responsable légal avant diffusion</li>
-                <li style="margin-bottom: var(--spacing-xs); color: var(--color-text-medium);"><strong>Archivage :</strong> Conservation de toutes les versions pendant au moins 5 ans</li>
+                <li style="margin-bottom: var(--spacing-xs); color: var(--color-text-medium);"><strong>Analyse :</strong> Identification des besoins informationnels de votre cible et des mots-clés pertinents</li>
+                <li style="margin-bottom: var(--spacing-xs); color: var(--color-text-medium);"><strong>Rédaction :</strong> Création du contenu par un docteur en pharmacie spécialisé dans votre thématique</li>
+                <li style="margin-bottom: var(--spacing-xs); color: var(--color-text-medium);"><strong>Optimisation :</strong> Intégration des bonnes pratiques SEO sans altérer le fond scientifique</li>
+                <li style="margin-bottom: var(--spacing-xs); color: var(--color-text-medium);"><strong>Vérification :</strong> Relecture croisée et validation des sources avant publication</li>
             </ol>
 
-            <h2>Les sanctions encourues</h2>
-            <p>Le non-respect de la réglementation peut entraîner :</p>
-            <ul>
-                <li>Des mises en demeure de l'ANSM</li>
-                <li>Des amendes administratives (jusqu'à 500 000 € pour les personnes morales)</li>
-                <li>Des sanctions pénales dans les cas graves</li>
-                <li>Une atteinte durable à la réputation de l'entreprise</li>
-                <li>Le retrait forcé des contenus litigieux</li>
-            </ul>
-
-            <h2>Évolutions récentes et tendances 2025</h2>
-            
-            <h3>Transparence accrue</h3>
-            <p>L'EMA a renforcé ses exigences de transparence concernant les essais cliniques. Tous les résultats, y compris négatifs, doivent être accessibles publiquement.</p>
-
-            <h3>Intelligence artificielle</h3>
-            <p>L'usage de l'IA pour générer des contenus médicaux commence à être encadré. L'ANSM recommande :</p>
-            <ul>
-                <li>La mention explicite quand un contenu est généré par IA</li>
-                <li>Une validation humaine systématique</li>
-                <li>La traçabilité des sources utilisées par l'algorithme</li>
-            </ul>
-
-            <h3>Influenceurs et prescripteurs digitaux</h3>
-            <p>Nouvelle directive 2024 : tout partenariat entre un laboratoire et un créateur de contenu santé doit être déclaré et notifié à l'ANSM si le médicament est mentionné.</p>
-
-            <h2>Notre accompagnement chez B.E. 360</h2>
-            <p>Nos docteurs en pharmacie sont formés aux exigences réglementaires ANSM et EMA. Nous vous accompagnons sur :</p>
-            <ul>
-                <li>L'audit de conformité de vos contenus existants</li>
-                <li>La rédaction de nouveaux supports compliant</li>
-                <li>La formation de vos équipes aux bonnes pratiques</li>
-                <li>La veille réglementaire continue</li>
-            </ul>
-
             <h2>Conclusion</h2>
-            <p>Respecter les exigences ANSM et EMA n'est pas une contrainte bureaucratique. C'est une garantie de qualité, de crédibilité et de protection pour votre entreprise et pour les patients. Dans un environnement digital en constante évolution, la vigilance réglementaire doit être quotidienne.</p>
+            <p>Optimiser un contenu médical pour Google n'est pas un jeu de compromis entre visibilité et rigueur. C'est un exercice d'équilibre qui demande une expertise double : scientifique et digitale. En suivant ces principes, vous créez des contenus qui servent à la fois vos objectifs de communication et l'intérêt de vos lecteurs.</p>
 
             <div class="highlight">
-                <strong>Besoin d'un audit de conformité ?</strong> Nos experts passent en revue vos contenus actuels et vous fournissent un rapport détaillé avec recommandations d'optimisation. <a href="index.html#contact" style="color: var(--color-accent); text-decoration: underline;">Contactez-nous</a> pour programmer un échange.
+                <strong>Besoin d'accompagnement ?</strong> Nos experts en medical copywriting sont à votre disposition pour auditer vos contenus existants ou créer de nouveaux articles optimisés. <a href="index.html#contact" style="color: var(--color-accent); text-decoration: underline;">Contactez-nous</a> pour en discuter.
             </div>
-
-            <h2>Ressources utiles</h2>
-            <ul>
-                <li>Site officiel de l'<a href="https://ansm.sante.fr" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent); text-decoration: underline;">ANSM</a></li>
-                <li>Site officiel de l'<a href="https://ema.europa.eu" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent); text-decoration: underline;">EMA</a></li>
-                <li>Code de la santé publique - Articles sur la publicité des médicaments</li>
-                <li>Charte de l'information médicale par les entreprises de santé (LEEM)</li>
-            </ul>
         </div>
     </article>
 
@@ -288,7 +399,7 @@
                     <p>La science au service du bien-être. Experts en medical copywriting dirigés par des docteurs en pharmacie.</p>
                 </div>
                 <div>
-                    <h4 class="footer-title">Navigation</h4>
+                    <h4 class="footer-title" style="font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-cream); margin-bottom: var(--spacing-md);">Navigation</h4>
                     <ul class="footer-links">
                         <li><a href="index.html#accueil" class="footer-link">Accueil</a></li>
                         <li><a href="index.html#apropos" class="footer-link">À propos</a></li>
@@ -298,7 +409,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer-title">Services</h4>
+                    <h4 class="footer-title" style="font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-cream); margin-bottom: var(--spacing-md);">Services</h4>
                     <ul class="footer-links">
                         <li><a href="index.html#services" class="footer-link">Vulgarisation scientifique</a></li>
                         <li><a href="index.html#services" class="footer-link">Révision & édition</a></li>
@@ -307,7 +418,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer-title">Contact</h4>
+                    <h4 class="footer-title" style="font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-cream); margin-bottom: var(--spacing-md);">Contact</h4>
                     <ul class="footer-links">
                         <li><a href="mailto:Be.health.360@gmail.com" class="footer-link">Be.health.360@gmail.com</a></li>
                         <li><span class="footer-link">Paris, France</span></li>

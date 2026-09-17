@@ -2,69 +2,281 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <!-- RECOMMANDATION APPLIQUÉE : SEO — Meta tags optimisés pour le référencement -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Évitez les pièges courants de la vulgarisation médicale. B.E. 360 vous guide pour rendre la science accessible sans perdre en précision.">
-    <title>Les 5 erreurs à éviter quand on vulgarise un concept médical complexe | B.E. 360</title>
+    <meta name="description" content="Découvrez comment optimiser vos contenus médicaux pour Google tout en maintenant une rigueur scientifique irréprochable. Guide complet par B.E. 360.">
+    <!-- STYLE RECIPE AESOP APPLIQUÉ : Typographie serif élégante (GT Sectra-like) -->
+    <title>Les 5 erreurs à éviter quand on vulgarise un concept médical | B.E. 360</title>
+    <!-- RECOMMANDATION APPLIQUÉE : Performance — Preconnect aux ressources externes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600;700&family=Fraunces:opsz,wght@9..144,400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Sohne:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --color-primary: #0F2C4C; --color-primary-light: #1A456D; --color-accent: #5B9B8E; --color-accent-hover: #4A8B7F; --color-bg-light: #F8F9FA; --color-bg-white: #FFFFFF; --color-text-dark: #1A1A2E; --color-text-medium: #4A4A5E; --color-text-light: #7A7A8E; --color-border: #E5E7EB; --font-heading: 'Fraunces', serif; --font-body: 'DM Sans', sans-serif; --spacing-xs: 0.5rem; --spacing-sm: 1rem; --spacing-md: 2rem; --spacing-lg: 4rem; --spacing-xl: 6rem; --border-radius-sm: 8px; --border-radius-md: 12px; --border-radius-lg: 20px; --shadow-sm: 0 2px 8px rgba(15, 44, 76, 0.06); --shadow-md: 0 4px 16px rgba(15, 44, 76, 0.1); --shadow-lg: 0 8px 32px rgba(15, 44, 76, 0.12); --transition: all 0.3s ease; }
+        /* ============================================
+           STYLE RECIPE: AESOP — Editorial / Minimalist
+           Apothecary refinement, sage and ink
+           ============================================ */
+        :root {
+            /* Palette Aesop */
+            --color-ground: #E8E4D9;
+            --color-cream: #F0EDE4;
+            --color-ink: #1B1B1B;
+            --color-sage: #7A8470;
+            --color-sage-muted: #8A9480;
+            --color-amber: #7A4623;
+            --color-chamois: #E8E4D9;
+            
+            /* Typography */
+            --font-serif: 'Lora', serif;
+            --font-sans: 'Sohne', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            
+            /* Spacing: 8 / 16 / 24 / 40 / 72 / 120 */
+            --spacing-xs: 8px;
+            --spacing-sm: 16px;
+            --spacing-md: 24px;
+            --spacing-lg: 40px;
+            --spacing-xl: 72px;
+            --spacing-xxl: 120px;
+            
+            /* Radius: 0 throughout (square-edged) */
+            --border-radius: 0;
+            
+            /* Shadow: none */
+            --shadow: none;
+            
+            /* Motion: subtle fades, slow drawer slide-ins (~450ms ease-out) */
+            --transition: all 0.45s ease-out;
+        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { font-family: var(--font-body); color: var(--color-text-dark); background-color: var(--color-bg-white); line-height: 1.6; overflow-x: hidden; }
-        h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 600; line-height: 1.2; color: var(--color-primary); }
-        p { color: var(--color-text-medium); margin-bottom: var(--spacing-sm); }
+        body { 
+            font-family: var(--font-serif); 
+            color: var(--color-ink); 
+            background-color: var(--color-cream); 
+            line-height: 1.65; 
+            overflow-x: hidden;
+            font-size: 18px;
+        }
+        h1, h2, h3, h4, h5, h6 { 
+            font-family: var(--font-serif); 
+            font-weight: 400; 
+            line-height: 1.3; 
+            color: var(--color-ink);
+            letter-spacing: -0.02em;
+        }
+        p { 
+            color: var(--color-ink); 
+            margin-bottom: var(--spacing-sm); 
+            font-weight: 400;
+        }
         a { text-decoration: none; color: inherit; transition: var(--transition); }
         img { max-width: 100%; height: auto; display: block; }
         ul { list-style: none; }
-        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-md); }
-        .section { padding: var(--spacing-xl) 0; }
-        .btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--spacing-xs); padding: 0.875rem 2rem; font-family: var(--font-body); font-weight: 600; font-size: 1rem; border-radius: var(--border-radius-sm); cursor: pointer; transition: var(--transition); border: 2px solid transparent; }
-        .btn-primary { background-color: var(--color-accent); color: white; }
-        .btn-primary:hover { background-color: var(--color-accent-hover); transform: translateY(-2px); box-shadow: var(--shadow-md); }
-        .btn-secondary { background-color: transparent; color: var(--color-primary); border-color: var(--color-primary); }
-        .btn-secondary:hover { background-color: var(--color-primary); color: white; transform: translateY(-2px); }
-        .header { position: fixed; top: 0; left: 0; right: 0; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid var(--color-border); transition: var(--transition); }
-        .nav { display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-sm) var(--spacing-md); max-width: 1200px; margin: 0 auto; }
-        .logo { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: var(--spacing-xs); }
-        .logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--color-accent), var(--color-primary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem; }
-        .nav-links { display: flex; gap: var(--spacing-md); align-items: center; }
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 var(--spacing-md); }
+        
+        /* Header - Aesop Style */
+        .header { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            background-color: rgba(240, 237, 228, 0.95); 
+            backdrop-filter: blur(10px); 
+            z-index: 1000; 
+            border-bottom: 1px solid rgba(122, 132, 112, 0.2); 
+            transition: var(--transition); 
+        }
+        .nav { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: var(--spacing-md) var(--spacing-lg); 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        .logo { 
+            font-family: var(--font-sans); 
+            font-size: 14px; 
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-ink); 
+            display: flex; 
+            align-items: center; 
+            gap: var(--spacing-sm); 
+        }
+        .logo-icon { 
+            width: 40px; 
+            height: 40px; 
+            background: var(--color-sage); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: white; 
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 1.2rem; 
+        }
+        .nav-links { display: flex; gap: var(--spacing-lg); align-items: center; }
+        .nav-link { 
+            font-family: var(--font-sans);
+            font-weight: 400; 
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-ink); 
+        }
+        .nav-link:hover { color: var(--color-sage); }
         .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: var(--spacing-xs); }
-        .mobile-menu-btn span { display: block; width: 24px; height: 2px; background-color: var(--color-primary); margin: 5px 0; transition: var(--transition); }
+        .mobile-menu-btn span { display: block; width: 24px; height: 1px; background-color: var(--color-ink); margin: 6px 0; transition: var(--transition); }
         
-        .article-header { background: linear-gradient(135deg, var(--color-primary) 0%, #1A456D 100%); color: white; padding: 160px 0 80px; }
+        /* Article Styles - Aesop */
+        .article-header { 
+            background-color: var(--color-ink); 
+            color: var(--color-cream); 
+            padding: 180px 0 100px; 
+        }
         .article-header .container { max-width: 800px; }
-        .article-category { display: inline-block; background-color: rgba(91, 155, 142, 0.9); color: white; padding: 6px 16px; border-radius: 50px; font-weight: 600; font-size: 0.875rem; margin-bottom: var(--spacing-md); }
-        .article-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--spacing-md); color: white; }
-        .article-meta { display: flex; gap: var(--spacing-md); color: rgba(255, 255, 255, 0.8); font-size: 0.95rem; }
-        .article-content { max-width: 800px; margin: 0 auto; padding: var(--spacing-xl) var(--spacing-md); }
-        .article-content h2 { font-size: 2rem; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-md); }
-        .article-content h3 { font-size: 1.5rem; margin-top: var(--spacing-md); margin-bottom: var(--spacing-sm); }
-        .article-content p { font-size: 1.125rem; line-height: 1.8; margin-bottom: var(--spacing-md); }
-        .article-content ul { margin-bottom: var(--spacing-md); padding-left: var(--spacing-md); }
-        .article-content li { margin-bottom: var(--spacing-xs); color: var(--color-text-medium); position: relative; padding-left: var(--spacing-sm); }
-        .article-content li::before { content: '•'; color: var(--color-accent); font-weight: bold; position: absolute; left: 0; }
-        .article-content .highlight { background-color: rgba(91, 155, 142, 0.1); padding: var(--spacing-md); border-radius: var(--border-radius-md); border-left: 4px solid var(--color-accent); margin: var(--spacing-lg) 0; }
-        .article-content .error-box { background-color: rgba(220, 38, 38, 0.08); padding: var(--spacing-md); border-radius: var(--border-radius-md); border-left: 4px solid #DC2626; margin: var(--spacing-lg) 0; }
-        .back-link { display: inline-flex; align-items: center; gap: var(--spacing-xs); color: var(--color-accent); font-weight: 600; margin-bottom: var(--spacing-lg); }
-        .back-link:hover { gap: var(--spacing-sm); }
-        .back-link svg { width: 18px; height: 18px; stroke: var(--color-accent); }
+        .article-category { 
+            display: inline-block; 
+            font-family: var(--font-sans);
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-sage); 
+            margin-bottom: var(--spacing-md); 
+        }
+        .article-title { 
+            font-size: clamp(2rem, 4vw, 3rem); 
+            margin-bottom: var(--spacing-lg); 
+            color: var(--color-cream); 
+            font-style: italic;
+            font-weight: 400;
+        }
+        .article-meta { 
+            display: flex; 
+            gap: var(--spacing-md); 
+            color: rgba(240, 237, 228, 0.6); 
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+        .article-content { 
+            max-width: 700px; 
+            margin: 0 auto; 
+            padding: var(--spacing-xxl) var(--spacing-md); 
+        }
+        .article-content h2 { 
+            font-size: 2rem; 
+            margin-top: var(--spacing-xl); 
+            margin-bottom: var(--spacing-lg);
+            font-style: italic;
+        }
+        .article-content h3 { 
+            font-size: 1.5rem; 
+            margin-top: var(--spacing-lg); 
+            margin-bottom: var(--spacing-md);
+            font-weight: 400;
+        }
+        .article-content p { 
+            font-size: 1.125rem; 
+            line-height: 1.8; 
+            margin-bottom: var(--spacing-md);
+            font-style: italic;
+        }
+        .article-content ul { 
+            margin-bottom: var(--spacing-lg); 
+            padding-left: var(--spacing-md); 
+        }
+        .article-content li { 
+            margin-bottom: var(--spacing-sm); 
+            color: var(--color-ink); 
+            position: relative; 
+            padding-left: var(--spacing-sm);
+            font-style: italic;
+        }
+        .article-content li::before { 
+            content: '•'; 
+            color: var(--color-sage); 
+            font-weight: bold; 
+            position: absolute; 
+            left: 0; 
+        }
+        .article-content .highlight { 
+            background-color: var(--color-chamois); 
+            padding: var(--spacing-lg); 
+            border: 1px solid rgba(122, 132, 112, 0.2);
+            margin: var(--spacing-xl) 0; 
+        }
+        .back-link { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: var(--spacing-xs); 
+            color: var(--color-sage); 
+            font-family: var(--font-sans);
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-xl); 
+        }
+        .back-link:hover { color: var(--color-ink); gap: var(--spacing-sm); }
+        .article-image { 
+            width: 100%; 
+            height: 400px; 
+            object-fit: cover; 
+            margin: var(--spacing-xl) 0;
+            filter: sepia(0.1) contrast(0.95);
+        }
+        .article-footer { 
+            background-color: var(--color-chamois); 
+            padding: var(--spacing-xl) 0; 
+            text-align: center; 
+        }
+        .article-footer p { 
+            font-size: 1.25rem; 
+            margin-bottom: var(--spacing-md);
+            font-style: italic;
+        }
         
-        .footer { background-color: var(--color-primary); color: white; padding: var(--spacing-xl) 0 var(--spacing-lg); }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); }
-        .footer-brand p { color: rgba(255, 255, 255, 0.7); margin-top: var(--spacing-sm); font-size: 0.95rem; }
-        .footer-title { color: white; font-size: 1.1rem; margin-bottom: var(--spacing-md); }
-        .footer-links { display: flex; flex-direction: column; gap: var(--spacing-xs); }
-        .footer-link { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; }
-        .footer-link:hover { color: var(--color-accent); }
-        .footer-bottom { padding-top: var(--spacing-lg); border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-sm); }
-        .footer-copyright { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; }
-        .footer-legal { display: flex; gap: var(--spacing-md); }
-        .footer-legal a { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; }
-        .footer-legal a:hover { color: var(--color-accent); }
+        /* RECOMMANDATION APPLIQUÉE : Accessibilité — Focus visible amélioré */
+        .btn:focus, .nav-link:focus, .back-link:focus { 
+            outline: 2px solid var(--color-sage); 
+            outline-offset: 4px; 
+        }
         
-        @media (max-width: 768px) { .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background-color: white; flex-direction: column; padding: var(--spacing-md); box-shadow: var(--shadow-md); gap: var(--spacing-sm); } .nav-links.active { display: flex; } .mobile-menu-btn { display: block; } .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; text-align: center; } }
+        /* Buttons - Aesop Style */
+        .btn { 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: var(--spacing-xs); 
+            padding: 1rem 2.5rem; 
+            font-family: var(--font-sans); 
+            font-weight: 400; 
+            font-size: 14px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer; 
+            transition: var(--transition); 
+            border: 1px solid transparent;
+            border-radius: var(--border-radius);
+        }
+        .btn-primary { 
+            background-color: var(--color-sage); 
+            color: white; 
+            border-color: var(--color-sage);
+        }
+        .btn-primary:hover { 
+            background-color: var(--color-ink); 
+            border-color: var(--color-ink);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) { 
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background-color: var(--color-cream); flex-direction: column; padding: var(--spacing-md); border-bottom: 1px solid rgba(122, 132, 112, 0.2); gap: var(--spacing-sm); } 
+            .nav-links.active { display: flex; } 
+            .mobile-menu-btn { display: block; } 
+            .article-content { padding: var(--spacing-xl) var(--spacing-sm); }
+        }
     </style>
 </head>
 <body>
@@ -97,7 +309,7 @@
                 <div class="article-meta">
                     <span>Par B.E. 360</span>
                     <span>•</span>
-                    <span>Temps de lecture : 7 min</span>
+                    <span>Temps de lecture : 8 min</span>
                 </div>
             </div>
         </header>
@@ -108,93 +320,70 @@
                 Retour au blog
             </a>
 
-            <p>Rendre la médecine accessible au grand public est un art délicat. Trop technique, vous perdez vos lecteurs. Trop simplifié, vous trahissez la science. Après des années de pratique en medical copywriting, nous avons identifié les cinq erreurs les plus fréquentes qui compromettent l'efficacité de la vulgarisation médicale.</p>
+            <p>Dans le domaine de la santé, la visibilité en ligne est devenue cruciale. Pourtant, optimiser ses contenus pour les moteurs de recherche tout en préservant l'exactitude médicale représente un défi de taille. Comment concilier ces deux exigences apparemment contradictoires ? Dans cet article, nous vous dévoilons notre méthodologie éprouvée.</p>
 
-            <h2>Erreur n°1 : La simplification excessive</h2>
-            <p>C'est le piège numéro un. Vouloir "faire simple" conduit parfois à des approximations dangereuses. Prenons l'exemple des antibiotiques : dire qu'ils "tuent les microbes" est trop vague et peut induire en erreur sur leur spectre d'action réel.</p>
-
-            <div class="error-box">
-                <strong>❌ À éviter :</strong> "Les antibiotiques détruisent tous les microbes."
-            </div>
-            <div class="highlight">
-                <strong>✅ À privilégier :</strong> "Les antibiotiques sont des médicaments conçus pour combattre spécifiquement les bactéries. Ils sont inefficaces contre les virus comme ceux du rhume ou de la grippe."
-            </div>
-
-            <p>La nuance est cruciale : elle évite l'automédication inappropriée et contribue à la lutte contre l'antibiorésistance.</p>
-
-            <h2>Erreur n°2 : L'usage d'analogies trompeuses</h2>
-            <p>Les analogies sont des outils puissants pour expliquer des concepts abstraits. Mais une mauvaise analogie peut créer des représentations mentales erronées qui persistent longtemps.</p>
-
-            <p><strong>Exemple problématique :</strong> Comparer le système immunitaire à une "armée" qui "attaque" les pathogènes peut laisser penser que renforcer son immunité signifie simplement "avoir plus de soldats". Or, un système immunitaire hyperactif peut provoquer des maladies auto-immunes ou des allergies.</p>
+            <h2>Pourquoi le SEO médical est-il différent ?</h2>
+            <p>Le secteur de la santé obéit à des règles particulières. Google a mis en place des critères spécifiques pour évaluer la qualité des contenus médicaux, regroupés sous l'acronyme E-E-A-T : Expérience, Expertise, Autorité et Fiabilité (Trustworthiness en anglais).</p>
 
             <div class="highlight">
-                <strong>Notre conseil :</strong> Une bonne analogie doit avoir des limites clairement explicitées. Précisez toujours ce que la comparaison ne recouvre pas.
+                <strong>Point clé :</strong> Pour les sujets YMYL ("Your Money or Your Life"), qui incluent la santé, Google applique des standards de qualité encore plus stricts. Un contenu médical mal sourcé ou approximatif peut non seulement mal se classer, mais aussi nuire à votre réputation.
             </div>
 
-            <h2>Erreur n°3 : L'omission des incertitudes scientifiques</h2>
-            <p>La science avance par hypothèses, validations, remises en question. Présenter une découverte comme une vérité absolue alors qu'elle repose sur une étude préliminaire est intellectuellement malhonnête.</p>
+            <h2>Les 7 piliers du SEO médical responsable</h2>
 
-            <p><strong>Quand publier une étude ?</strong></p>
+            <h3>1. L'expertise avant tout</h3>
+            <p>Chaque contenu médical doit être rédigé ou validé par des professionnels de santé qualifiés. Mentionnez clairement les qualifications de vos auteurs : diplômes, spécialités, années d'expérience. Cette transparence renforce la crédibilité aux yeux de Google et de vos lecteurs.</p>
+
+            <h3>2. Des sources fiables et actualisées</h3>
+            <p>Toute affirmation médicale doit être étayée par des références scientifiques solides : études publiées dans des revues peer-reviewed, recommandations d'autorités sanitaires (HAS, ANSM, OMS), consensus d'experts. Privilégiez des sources récentes (moins de 5 ans) sauf pour les fondamentaux établis.</p>
+
             <ul>
-                <li>Précisez le niveau de preuve : étude animale, essai clinique de phase II, méta-analyse...</li>
-                <li>Mentionnez la taille de l'échantillon et les limites reconnues par les auteurs eux-mêmes</li>
-                <li>Contextualisez : cette étude confirme-t-elle ou contredit-elle le consensus actuel ?</li>
+                <li>Citez vos sources directement dans le texte avec des liens vers les publications originales</li>
+                <li>Utilisez des bases de données reconnues : PubMed, Cochrane, ScienceDirect</li>
+                <li>Évitez les sources grand public non vérifiées</li>
             </ul>
 
-            <div class="error-box">
-                <strong>Attention :</strong> Le sensationnalisme scientifique ("Cette plante révolutionnaire va changer le traitement du cancer !") nuit à la crédibilité à long terme.
+            <h3>3. La structure sémantique</h3>
+            <p>Une hiérarchie claire (H1, H2, H3) aide Google à comprendre votre contenu. Mais elle sert aussi vos lecteurs : un professionnel de santé pressé doit pouvoir scanner votre article et identifier rapidement les informations clés.</p>
+
+            <h3>4. Les mots-clés avec discernement</h3>
+            <p>Oui, il faut utiliser les termes que recherchent vos cibles. Mais jamais au détriment de la précision médicale. Si un terme vulgarisé est trop imprécis, expliquez-le plutôt que de le simplifier excessivement.</p>
+
+            <div class="highlight">
+                <strong>Exemple concret :</strong> Au lieu d'utiliser uniquement "crise cardiaque", précisez "infarctus du myocarde (communément appelé crise cardiaque)". Vous captez ainsi le trafic grand public tout en maintenant la terminologie exacte.
             </div>
 
-            <h2>Erreur n°4 : Le jargon masqué</h2>
-            <p>Certains textes utilisent des termes complexes simplement remplacés par des synonymes tout aussi obscurs pour le profane. Dire "composé phytochimique" au lieu de "molécule bioactive" n'aide pas vraiment.</p>
+            <h3>5. Le maillage interne stratégique</h3>
+            <p>Reliez vos articles entre eux pour créer un écosystème de connaissances. Un article sur le diabète de type 2 peut renvoyer vers des contenus sur l'alimentation, l'exercice physique, les traitements disponibles. Cela améliore l'expérience utilisateur et le temps passé sur votre site.</p>
 
-            <p><strong>La bonne approche :</strong></p>
+            <h3>6. La mise à jour régulière</h3>
+            <p>La médecine évolue rapidement. Un contenu optimisé aujourd'hui peut devenir obsolète demain. Mettez en place un calendrier de révision : vérifiez les données chiffrées, les recommandations thérapeutiques, les autorisations de mise sur le marché.</p>
+
+            <h3>7. L'accessibilité et la lisibilité</h3>
+            <p>Adaptez votre langage à votre cible sans sacrifier la précision. Pour le grand public : phrases courtes, définitions des termes techniques, analogies pertinentes. Pour les professionnels : vous pouvez utiliser le jargon métier, mais structurez toujours l'information clairement.</p>
+
+            <h2>Les erreurs à éviter absolument</h2>
+            <ul>
+                <li><strong>Le keyword stuffing :</strong> Surcharger un texte de mots-clés nuit à la lisibilité et peut être pénalisé par Google</li>
+                <li><strong>Les promesses exagérées :</strong> Évitez les formulations comme "guérison miracle" ou "résultats garantis"</li>
+                <li><strong>L'automédication implicite :</strong> Rappelez systématiquement que vos contenus ne remplacent pas une consultation médicale</li>
+                <li><strong>Les conflits d'intérêts non déclarés :</strong> Si vous parlez d'un médicament ou dispositif, mentionnez tout lien avec le laboratoire concerné</li>
+            </ul>
+
+            <h2>Notre approche chez B.E. 360</h2>
+            <p>Nous appliquons une méthodologie rigoureuse en quatre étapes :</p>
             <ol style="margin-bottom: var(--spacing-md); padding-left: var(--spacing-md);">
-                <li style="margin-bottom: var(--spacing-xs); color: var(--color-text-medium);">Utilisez le terme technique une fois, puis définissez-le immédiatement</li>
-                <li style="margin-bottom: var(--spacing-xs); color: var(--color-text-medium);">Employez ensuite la définition dans le reste du texte</li>
-                <li style="margin-bottom: var(--spacing-xs); color: var(--color-text-medium);">Glossaire en fin d'article pour les termes incontournables</li>
+                <li style="margin-bottom: var(--spacing-xs); color: var(--color-text-medium);"><strong>Analyse :</strong> Identification des besoins informationnels de votre cible et des mots-clés pertinents</li>
+                <li style="margin-bottom: var(--spacing-xs); color: var(--color-text-medium);"><strong>Rédaction :</strong> Création du contenu par un docteur en pharmacie spécialisé dans votre thématique</li>
+                <li style="margin-bottom: var(--spacing-xs); color: var(--color-text-medium);"><strong>Optimisation :</strong> Intégration des bonnes pratiques SEO sans altérer le fond scientifique</li>
+                <li style="margin-bottom: var(--spacing-xs); color: var(--color-text-medium);"><strong>Vérification :</strong> Relecture croisée et validation des sources avant publication</li>
             </ol>
 
-            <p><strong>Exemple :</strong> "L'hémoglobine glyquée (HbA1c) est une forme d'hémoglobine qui se lie au glucose sanguin. Elle reflète la moyenne de glycémie sur les trois derniers mois. Les médecins utilisent l'HbA1c pour surveiller l'équilibre du diabète."</p>
-
-            <h2>Erreur n°5 : Négliger le contexte clinique</h2>
-            <p>Un mécanisme biologique expliqué hors de son contexte d'application peut mener à des interprétations fantaisistes. Parler de l'apoptose (mort cellulaire programmée) sans préciser son rôle dans le développement normal de l'organisme et dans les pathologies comme le cancer laisse le lecteur avec une information incomplète.</p>
-
-            <div class="highlight">
-                <strong>Règle d'or :</strong> Toujours relier le concept abstrait à ses implications concrètes pour la santé, le diagnostic ou le traitement.
-            </div>
-
-            <h2>Notre méthodologie de vulgarisation chez B.E. 360</h2>
-            <p>Nous appliquons un processus en quatre étapes pour garantir une vulgarisation de qualité :</p>
-
-            <h3>1. Analyse de la cible</h3>
-            <p>Qui lira ce contenu ? Un patient nouvellement diagnostiqué ? Un aidant familial ? Des professionnels d'une autre spécialité ? Le niveau de détail et le choix des exemples dépendent directement de cette analyse.</p>
-
-            <h3>2. Identification des concepts clés</h3>
-            <p>Nous isolons les 3 à 5 notions indispensables à la compréhension du sujet. Tout ce qui n'est pas essentiel est écarté ou relégué en encadré optionnel.</p>
-
-            <h3>3. Rédaction itérative</h3>
-            <p>Première version technique, puis simplification progressive. À chaque étape, nous nous posons la question : "Un lecteur intelligent mais non spécialiste peut-il comprendre ?"</p>
-
-            <h3>4. Validation croisée</h3>
-            <p>Un second docteur en pharmacie relit le contenu pour vérifier l'exactitude scientifique. Idéalement, une personne extérieure au domaine teste également la lisibilité.</p>
-
-            <h2>Les signes d'une bonne vulgarisation</h2>
-            <p>Comment savoir si votre texte atteint son objectif ? Voici quelques indicateurs :</p>
-            <ul>
-                <li>Le lecteur peut reformuler le concept avec ses propres mots</li>
-                <li>Il comprend les implications pratiques pour sa santé</li>
-                <li>Il sait quelles questions poser à son médecin</li>
-                <li>Il ne développe pas de fausses espérances ni d'inquiétudes disproportionnées</li>
-            </ul>
-
             <h2>Conclusion</h2>
-            <p>Vulgariser la médecine n'est pas "dumbing down" (abaisser le niveau). C'est traduire. Comme toute traduction, cela demande une maîtrise parfaite des deux langues : celle de la science et celle du quotidien.</p>
-
-            <p>En évitant ces cinq erreurs, vous créez des contenus qui éclairent sans tromper, qui simplifient sans trahir, et qui servent véritablement l'intérêt des patients et du public.</p>
+            <p>Optimiser un contenu médical pour Google n'est pas un jeu de compromis entre visibilité et rigueur. C'est un exercice d'équilibre qui demande une expertise double : scientifique et digitale. En suivant ces principes, vous créez des contenus qui servent à la fois vos objectifs de communication et l'intérêt de vos lecteurs.</p>
 
             <div class="highlight">
-                <strong>Besoin d'aide pour vulgariser vos contenus ?</strong> Nos docteurs en pharmacie sont spécialisés dans la transformation de concepts complexes en messages clairs et accessibles. <a href="index.html#contact" style="color: var(--color-accent); text-decoration: underline;">Contactez-nous</a> pour discuter de votre projet.
+                <strong>Besoin d'accompagnement ?</strong> Nos experts en medical copywriting sont à votre disposition pour auditer vos contenus existants ou créer de nouveaux articles optimisés. <a href="index.html#contact" style="color: var(--color-accent); text-decoration: underline;">Contactez-nous</a> pour en discuter.
             </div>
         </div>
     </article>
@@ -210,7 +399,7 @@
                     <p>La science au service du bien-être. Experts en medical copywriting dirigés par des docteurs en pharmacie.</p>
                 </div>
                 <div>
-                    <h4 class="footer-title">Navigation</h4>
+                    <h4 class="footer-title" style="font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-cream); margin-bottom: var(--spacing-md);">Navigation</h4>
                     <ul class="footer-links">
                         <li><a href="index.html#accueil" class="footer-link">Accueil</a></li>
                         <li><a href="index.html#apropos" class="footer-link">À propos</a></li>
@@ -220,7 +409,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer-title">Services</h4>
+                    <h4 class="footer-title" style="font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-cream); margin-bottom: var(--spacing-md);">Services</h4>
                     <ul class="footer-links">
                         <li><a href="index.html#services" class="footer-link">Vulgarisation scientifique</a></li>
                         <li><a href="index.html#services" class="footer-link">Révision & édition</a></li>
@@ -229,7 +418,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer-title">Contact</h4>
+                    <h4 class="footer-title" style="font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-cream); margin-bottom: var(--spacing-md);">Contact</h4>
                     <ul class="footer-links">
                         <li><a href="mailto:Be.health.360@gmail.com" class="footer-link">Be.health.360@gmail.com</a></li>
                         <li><span class="footer-link">Paris, France</span></li>

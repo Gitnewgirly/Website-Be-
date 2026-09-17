@@ -2,69 +2,281 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <!-- RECOMMANDATION APPLIQUÉE : SEO — Meta tags optimisés pour le référencement -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Découvrez comment optimiser vos contenus médicaux pour Google tout en maintenant une rigueur scientifique irréprochable. Guide complet par B.E. 360.">
-    <title>Comment optimiser vos contenus médicaux pour Google sans compromettre la rigueur scientifique ? | B.E. 360</title>
+    <!-- STYLE RECIPE AESOP APPLIQUÉ : Typographie serif élégante (GT Sectra-like) -->
+    <title>Comment optimiser vos contenus médicaux pour Google | B.E. 360</title>
+    <!-- RECOMMANDATION APPLIQUÉE : Performance — Preconnect aux ressources externes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600;700&family=Fraunces:opsz,wght@9..144,400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Sohne:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --color-primary: #0F2C4C; --color-primary-light: #1A456D; --color-accent: #5B9B8E; --color-accent-hover: #4A8B7F; --color-bg-light: #F8F9FA; --color-bg-white: #FFFFFF; --color-text-dark: #1A1A2E; --color-text-medium: #4A4A5E; --color-text-light: #7A7A8E; --color-border: #E5E7EB; --font-heading: 'Fraunces', serif; --font-body: 'DM Sans', sans-serif; --spacing-xs: 0.5rem; --spacing-sm: 1rem; --spacing-md: 2rem; --spacing-lg: 4rem; --spacing-xl: 6rem; --border-radius-sm: 8px; --border-radius-md: 12px; --border-radius-lg: 20px; --shadow-sm: 0 2px 8px rgba(15, 44, 76, 0.06); --shadow-md: 0 4px 16px rgba(15, 44, 76, 0.1); --shadow-lg: 0 8px 32px rgba(15, 44, 76, 0.12); --transition: all 0.3s ease; }
+        /* ============================================
+           STYLE RECIPE: AESOP — Editorial / Minimalist
+           Apothecary refinement, sage and ink
+           ============================================ */
+        :root {
+            /* Palette Aesop */
+            --color-ground: #E8E4D9;
+            --color-cream: #F0EDE4;
+            --color-ink: #1B1B1B;
+            --color-sage: #7A8470;
+            --color-sage-muted: #8A9480;
+            --color-amber: #7A4623;
+            --color-chamois: #E8E4D9;
+            
+            /* Typography */
+            --font-serif: 'Lora', serif;
+            --font-sans: 'Sohne', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            
+            /* Spacing: 8 / 16 / 24 / 40 / 72 / 120 */
+            --spacing-xs: 8px;
+            --spacing-sm: 16px;
+            --spacing-md: 24px;
+            --spacing-lg: 40px;
+            --spacing-xl: 72px;
+            --spacing-xxl: 120px;
+            
+            /* Radius: 0 throughout (square-edged) */
+            --border-radius: 0;
+            
+            /* Shadow: none */
+            --shadow: none;
+            
+            /* Motion: subtle fades, slow drawer slide-ins (~450ms ease-out) */
+            --transition: all 0.45s ease-out;
+        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { font-family: var(--font-body); color: var(--color-text-dark); background-color: var(--color-bg-white); line-height: 1.6; overflow-x: hidden; }
-        h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 600; line-height: 1.2; color: var(--color-primary); }
-        p { color: var(--color-text-medium); margin-bottom: var(--spacing-sm); }
+        body { 
+            font-family: var(--font-serif); 
+            color: var(--color-ink); 
+            background-color: var(--color-cream); 
+            line-height: 1.65; 
+            overflow-x: hidden;
+            font-size: 18px;
+        }
+        h1, h2, h3, h4, h5, h6 { 
+            font-family: var(--font-serif); 
+            font-weight: 400; 
+            line-height: 1.3; 
+            color: var(--color-ink);
+            letter-spacing: -0.02em;
+        }
+        p { 
+            color: var(--color-ink); 
+            margin-bottom: var(--spacing-sm); 
+            font-weight: 400;
+        }
         a { text-decoration: none; color: inherit; transition: var(--transition); }
         img { max-width: 100%; height: auto; display: block; }
         ul { list-style: none; }
-        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-md); }
-        .section { padding: var(--spacing-xl) 0; }
-        .btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--spacing-xs); padding: 0.875rem 2rem; font-family: var(--font-body); font-weight: 600; font-size: 1rem; border-radius: var(--border-radius-sm); cursor: pointer; transition: var(--transition); border: 2px solid transparent; }
-        .btn-primary { background-color: var(--color-accent); color: white; }
-        .btn-primary:hover { background-color: var(--color-accent-hover); transform: translateY(-2px); box-shadow: var(--shadow-md); }
-        .btn-secondary { background-color: transparent; color: var(--color-primary); border-color: var(--color-primary); }
-        .btn-secondary:hover { background-color: var(--color-primary); color: white; transform: translateY(-2px); }
-        .header { position: fixed; top: 0; left: 0; right: 0; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid var(--color-border); transition: var(--transition); }
-        .nav { display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-sm) var(--spacing-md); max-width: 1200px; margin: 0 auto; }
-        .logo { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: var(--spacing-xs); }
-        .logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--color-accent), var(--color-primary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem; }
-        .nav-links { display: flex; gap: var(--spacing-md); align-items: center; }
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 var(--spacing-md); }
+        
+        /* Header - Aesop Style */
+        .header { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            background-color: rgba(240, 237, 228, 0.95); 
+            backdrop-filter: blur(10px); 
+            z-index: 1000; 
+            border-bottom: 1px solid rgba(122, 132, 112, 0.2); 
+            transition: var(--transition); 
+        }
+        .nav { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: var(--spacing-md) var(--spacing-lg); 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        .logo { 
+            font-family: var(--font-sans); 
+            font-size: 14px; 
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-ink); 
+            display: flex; 
+            align-items: center; 
+            gap: var(--spacing-sm); 
+        }
+        .logo-icon { 
+            width: 40px; 
+            height: 40px; 
+            background: var(--color-sage); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: white; 
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 1.2rem; 
+        }
+        .nav-links { display: flex; gap: var(--spacing-lg); align-items: center; }
+        .nav-link { 
+            font-family: var(--font-sans);
+            font-weight: 400; 
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-ink); 
+        }
+        .nav-link:hover { color: var(--color-sage); }
         .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: var(--spacing-xs); }
-        .mobile-menu-btn span { display: block; width: 24px; height: 2px; background-color: var(--color-primary); margin: 5px 0; transition: var(--transition); }
+        .mobile-menu-btn span { display: block; width: 24px; height: 1px; background-color: var(--color-ink); margin: 6px 0; transition: var(--transition); }
         
-        /* Article Styles */
-        .article-header { background: linear-gradient(135deg, var(--color-primary) 0%, #1A456D 100%); color: white; padding: 160px 0 80px; }
+        /* Article Styles - Aesop */
+        .article-header { 
+            background-color: var(--color-ink); 
+            color: var(--color-cream); 
+            padding: 180px 0 100px; 
+        }
         .article-header .container { max-width: 800px; }
-        .article-category { display: inline-block; background-color: rgba(91, 155, 142, 0.9); color: white; padding: 6px 16px; border-radius: 50px; font-weight: 600; font-size: 0.875rem; margin-bottom: var(--spacing-md); }
-        .article-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--spacing-md); color: white; }
-        .article-meta { display: flex; gap: var(--spacing-md); color: rgba(255, 255, 255, 0.8); font-size: 0.95rem; }
-        .article-content { max-width: 800px; margin: 0 auto; padding: var(--spacing-xl) var(--spacing-md); }
-        .article-content h2 { font-size: 2rem; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-md); }
-        .article-content h3 { font-size: 1.5rem; margin-top: var(--spacing-md); margin-bottom: var(--spacing-sm); }
-        .article-content p { font-size: 1.125rem; line-height: 1.8; margin-bottom: var(--spacing-md); }
-        .article-content ul { margin-bottom: var(--spacing-md); padding-left: var(--spacing-md); }
-        .article-content li { margin-bottom: var(--spacing-xs); color: var(--color-text-medium); position: relative; padding-left: var(--spacing-sm); }
-        .article-content li::before { content: '•'; color: var(--color-accent); font-weight: bold; position: absolute; left: 0; }
-        .article-content .highlight { background-color: rgba(91, 155, 142, 0.1); padding: var(--spacing-md); border-radius: var(--border-radius-md); border-left: 4px solid var(--color-accent); margin: var(--spacing-lg) 0; }
-        .back-link { display: inline-flex; align-items: center; gap: var(--spacing-xs); color: var(--color-accent); font-weight: 600; margin-bottom: var(--spacing-lg); }
-        .back-link:hover { gap: var(--spacing-sm); }
-        .back-link svg { width: 18px; height: 18px; stroke: var(--color-accent); }
+        .article-category { 
+            display: inline-block; 
+            font-family: var(--font-sans);
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-sage); 
+            margin-bottom: var(--spacing-md); 
+        }
+        .article-title { 
+            font-size: clamp(2rem, 4vw, 3rem); 
+            margin-bottom: var(--spacing-lg); 
+            color: var(--color-cream); 
+            font-style: italic;
+            font-weight: 400;
+        }
+        .article-meta { 
+            display: flex; 
+            gap: var(--spacing-md); 
+            color: rgba(240, 237, 228, 0.6); 
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+        .article-content { 
+            max-width: 700px; 
+            margin: 0 auto; 
+            padding: var(--spacing-xxl) var(--spacing-md); 
+        }
+        .article-content h2 { 
+            font-size: 2rem; 
+            margin-top: var(--spacing-xl); 
+            margin-bottom: var(--spacing-lg);
+            font-style: italic;
+        }
+        .article-content h3 { 
+            font-size: 1.5rem; 
+            margin-top: var(--spacing-lg); 
+            margin-bottom: var(--spacing-md);
+            font-weight: 400;
+        }
+        .article-content p { 
+            font-size: 1.125rem; 
+            line-height: 1.8; 
+            margin-bottom: var(--spacing-md);
+            font-style: italic;
+        }
+        .article-content ul { 
+            margin-bottom: var(--spacing-lg); 
+            padding-left: var(--spacing-md); 
+        }
+        .article-content li { 
+            margin-bottom: var(--spacing-sm); 
+            color: var(--color-ink); 
+            position: relative; 
+            padding-left: var(--spacing-sm);
+            font-style: italic;
+        }
+        .article-content li::before { 
+            content: '•'; 
+            color: var(--color-sage); 
+            font-weight: bold; 
+            position: absolute; 
+            left: 0; 
+        }
+        .article-content .highlight { 
+            background-color: var(--color-chamois); 
+            padding: var(--spacing-lg); 
+            border: 1px solid rgba(122, 132, 112, 0.2);
+            margin: var(--spacing-xl) 0; 
+        }
+        .back-link { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: var(--spacing-xs); 
+            color: var(--color-sage); 
+            font-family: var(--font-sans);
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-xl); 
+        }
+        .back-link:hover { color: var(--color-ink); gap: var(--spacing-sm); }
+        .article-image { 
+            width: 100%; 
+            height: 400px; 
+            object-fit: cover; 
+            margin: var(--spacing-xl) 0;
+            filter: sepia(0.1) contrast(0.95);
+        }
+        .article-footer { 
+            background-color: var(--color-chamois); 
+            padding: var(--spacing-xl) 0; 
+            text-align: center; 
+        }
+        .article-footer p { 
+            font-size: 1.25rem; 
+            margin-bottom: var(--spacing-md);
+            font-style: italic;
+        }
         
-        .footer { background-color: var(--color-primary); color: white; padding: var(--spacing-xl) 0 var(--spacing-lg); }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); }
-        .footer-brand p { color: rgba(255, 255, 255, 0.7); margin-top: var(--spacing-sm); font-size: 0.95rem; }
-        .footer-title { color: white; font-size: 1.1rem; margin-bottom: var(--spacing-md); }
-        .footer-links { display: flex; flex-direction: column; gap: var(--spacing-xs); }
-        .footer-link { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; }
-        .footer-link:hover { color: var(--color-accent); }
-        .footer-bottom { padding-top: var(--spacing-lg); border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-sm); }
-        .footer-copyright { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; }
-        .footer-legal { display: flex; gap: var(--spacing-md); }
-        .footer-legal a { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; }
-        .footer-legal a:hover { color: var(--color-accent); }
+        /* RECOMMANDATION APPLIQUÉE : Accessibilité — Focus visible amélioré */
+        .btn:focus, .nav-link:focus, .back-link:focus { 
+            outline: 2px solid var(--color-sage); 
+            outline-offset: 4px; 
+        }
         
-        @media (max-width: 768px) { .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background-color: white; flex-direction: column; padding: var(--spacing-md); box-shadow: var(--shadow-md); gap: var(--spacing-sm); } .nav-links.active { display: flex; } .mobile-menu-btn { display: block; } .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; text-align: center; } }
+        /* Buttons - Aesop Style */
+        .btn { 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: var(--spacing-xs); 
+            padding: 1rem 2.5rem; 
+            font-family: var(--font-sans); 
+            font-weight: 400; 
+            font-size: 14px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer; 
+            transition: var(--transition); 
+            border: 1px solid transparent;
+            border-radius: var(--border-radius);
+        }
+        .btn-primary { 
+            background-color: var(--color-sage); 
+            color: white; 
+            border-color: var(--color-sage);
+        }
+        .btn-primary:hover { 
+            background-color: var(--color-ink); 
+            border-color: var(--color-ink);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) { 
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background-color: var(--color-cream); flex-direction: column; padding: var(--spacing-md); border-bottom: 1px solid rgba(122, 132, 112, 0.2); gap: var(--spacing-sm); } 
+            .nav-links.active { display: flex; } 
+            .mobile-menu-btn { display: block; } 
+            .article-content { padding: var(--spacing-xl) var(--spacing-sm); }
+        }
     </style>
 </head>
 <body>
@@ -187,7 +399,7 @@
                     <p>La science au service du bien-être. Experts en medical copywriting dirigés par des docteurs en pharmacie.</p>
                 </div>
                 <div>
-                    <h4 class="footer-title">Navigation</h4>
+                    <h4 class="footer-title" style="font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-cream); margin-bottom: var(--spacing-md);">Navigation</h4>
                     <ul class="footer-links">
                         <li><a href="index.html#accueil" class="footer-link">Accueil</a></li>
                         <li><a href="index.html#apropos" class="footer-link">À propos</a></li>
@@ -197,7 +409,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer-title">Services</h4>
+                    <h4 class="footer-title" style="font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-cream); margin-bottom: var(--spacing-md);">Services</h4>
                     <ul class="footer-links">
                         <li><a href="index.html#services" class="footer-link">Vulgarisation scientifique</a></li>
                         <li><a href="index.html#services" class="footer-link">Révision & édition</a></li>
@@ -206,7 +418,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer-title">Contact</h4>
+                    <h4 class="footer-title" style="font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-cream); margin-bottom: var(--spacing-md);">Contact</h4>
                     <ul class="footer-links">
                         <li><a href="mailto:Be.health.360@gmail.com" class="footer-link">Be.health.360@gmail.com</a></li>
                         <li><span class="footer-link">Paris, France</span></li>
