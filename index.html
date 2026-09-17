@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- RECOMMANDATION APPLIQUÉE : SEO — Meta tags optimisés pour le référencement -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="B.E. 360 - Agence de medical copywriting dirigée par des docteurs en pharmacie. Rédaction médicale, vulgarisation scientifique, SEO santé et conformité réglementaire.">
+    <meta name="keywords" content="medical copywriting, rédaction médicale, vulgarisation scientifique, SEO santé, pharmacie, contenu médical, communication santé">
+    <meta name="author" content="B.E. 360">
+    <meta property="og:title" content="B.E. 360 | Medical Copywriting Expert">
+    <meta property="og:description" content="La science au service du bien-être. Experts en rédaction médicale et vulgarisation scientifique.">
+    <meta property="og:type" content="website">
+    <title>B.E. 360 | Medical Copywriting Expert</title>
+    <!-- RECOMMANDATION APPLIQUÉE : Performance — Preconnect aux ressources externes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <!-- STYLE RECIPE AESOP APPLIQUÉ : Typographie serif élégante (GT Sectra-like) -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Sohne:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================
+           STYLE RECIPE: AESOP — Editorial / Minimalist
+           Apothecary refinement, sage and ink
+           ============================================ */
+        :root {
+            /* Palette Aesop */
+            --color-ground: #E8E4D9;
+            --color-cream: #F0EDE4;
+            --color-ink: #1B1B1B;
+            --color-sage: #7A8470;
+            --color-sage-muted: #8A9480;
+            --color-amber: #7A4623;
+            --color-chamois: #E8E4D9;
+            
+            /* Typography */
+            --font-serif: 'Lora', serif;
+            --font-sans: 'Sohne', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            
+            /* Spacing: 8 / 16 / 24 / 40 / 72 / 120 */
+            --spacing-xs: 8px;
+            --spacing-sm: 16px;
+            --spacing-md: 24px;
+            --spacing-lg: 40px;
+            --spacing-xl: 72px;
+            --spacing-xxl: 120px;
+            
+            /* Radius: 0 throughout (square-edged) */
+            --border-radius: 0;
+            
+            /* Shadow: none */
+            --shadow: none;
+            
+            /* Motion: subtle fades, slow drawer slide-ins (~450ms ease-out) */
+            --transition: all 0.45s ease-out;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: var(--font-serif); 
+            color: var(--color-ink); 
+            background-color: var(--color-cream); 
+            line-height: 1.65; 
+            overflow-x: hidden;
+            font-size: 18px;
+        }
+        h1, h2, h3, h4, h5, h6 { 
+            font-family: var(--font-serif); 
+            font-weight: 400; 
+            line-height: 1.3; 
+            color: var(--color-ink);
+            letter-spacing: -0.02em;
+        }
+        p { 
+            color: var(--color-ink); 
+            margin-bottom: var(--spacing-sm); 
+            font-weight: 400;
+        }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        img { max-width: 100%; height: auto; display: block; }
+        ul { list-style: none; }
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 var(--spacing-md); }
+        .section { padding: var(--spacing-xxl) 0; }
+        .section-header { text-align: left; max-width: 600px; margin: 0 auto var(--spacing-xl); }
+        .section-label {
+            font-family: var(--font-sans);
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-sage);
+            margin-bottom: var(--spacing-sm);
+            display: block;
+        }
+        .section-title { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: var(--spacing-md); font-style: italic; }
+        .section-subtitle { font-size: 1.125rem; color: var(--color-sage-muted); font-style: italic; }
+        
+        /* Buttons — square-edged, no bold */
+        .btn { 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: var(--spacing-xs); 
+            padding: 1rem 2.5rem; 
+            font-family: var(--font-sans); 
+            font-weight: 400; 
+            font-size: 14px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer; 
+            transition: var(--transition); 
+            border: 1px solid transparent;
+            border-radius: var(--border-radius);
+        }
+        .btn-primary { 
+            background-color: var(--color-sage); 
+            color: white; 
+            border-color: var(--color-sage);
+        }
+        .btn-primary:hover { 
+            background-color: var(--color-ink); 
+            border-color: var(--color-ink);
+        }
+        .btn-secondary { 
+            background-color: transparent; 
+            color: var(--color-ink); 
+            border-color: var(--color-ink);
+        }
+        .btn-secondary:hover { 
+            background-color: var(--color-ink); 
+            color: var(--color-cream);
+        }
+        .btn-light {
+            background-color: transparent;
+            color: white;
+            border-color: white;
+        }
+        .btn-light:hover {
+            background-color: white;
+            color: var(--color-ink);
+        }
+        
+        /* Cards — no shadow, square edges */
+        .card { 
+            background: var(--color-cream); 
+            padding: var(--spacing-lg); 
+            transition: var(--transition); 
+            border: 1px solid rgba(122, 132, 112, 0.2);
+        }
+        .card:hover { 
+            border-color: var(--color-sage);
+        }
+        
+        /* RECOMMANDATION APPLIQUÉE : Accessibilité — Focus visible amélioré */
+        .btn:focus, .form-input:focus, .form-select:focus, .form-textarea:focus, .social-link:focus, .nav-link:focus { 
+            outline: 2px solid var(--color-sage); 
+            outline-offset: 4px; 
+        }
+        
+        /* Header */
+        .header { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            background-color: rgba(240, 237, 228, 0.95); 
+            backdrop-filter: blur(10px); 
+            z-index: 1000; 
+            border-bottom: 1px solid rgba(122, 132, 112, 0.2); 
+            transition: var(--transition); 
+        }
+        .nav { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: var(--spacing-md) var(--spacing-lg); 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        .logo { 
+            font-family: var(--font-sans); 
+            font-size: 14px; 
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-ink); 
+            display: flex; 
+            align-items: center; 
+            gap: var(--spacing-sm); 
+        }
+        .logo-icon { 
+            width: 40px; 
+            height: 40px; 
+            background: var(--color-sage); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: white; 
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 1.2rem; 
+        }
+        .nav-links { display: flex; gap: var(--spacing-lg); align-items: center; }
+        .nav-link { 
+            font-family: var(--font-sans);
+            font-weight: 400; 
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-ink); 
+            position: relative; 
+        }
+        .nav-link::after { 
+            content: ''; 
+            position: absolute; 
+            bottom: -6px; 
+            left: 0; 
+            width: 0; 
+            height: 1px; 
+            background-color: var(--color-sage); 
+            transition: var(--transition); 
+        }
+        .nav-link:hover { color: var(--color-sage); }
+        .nav-link:hover::after { width: 100%; }
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: var(--spacing-xs); }
+        .mobile-menu-btn span { display: block; width: 24px; height: 1px; background-color: var(--color-ink); margin: 6px 0; transition: var(--transition); }
+        
+        /* Hero Slider Styles - Updated for Aesop */
+        .hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding-top: 80px; overflow: hidden; }
+        .hero-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+        .hero-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 2s ease-in-out; }
+        .hero-slide.active { opacity: 1; }
+        .hero-slide img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(27, 27, 27, 0.6) 0%, rgba(122, 132, 112, 0.4) 100%); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; max-width: 650px; }
+        .hero-badge { 
+            display: inline-block; 
+            font-family: var(--font-sans);
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: white; 
+            padding: var(--spacing-xs) var(--spacing-md); 
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            margin-bottom: var(--spacing-lg); 
+        }
+        .hero-title { 
+            font-size: clamp(2.5rem, 6vw, 3.5rem); 
+            margin-bottom: var(--spacing-md); 
+            color: white; 
+            font-style: italic;
+            font-weight: 400;
+        }
+        .hero-subtitle { 
+            font-size: 1.125rem; 
+            color: rgba(255, 255, 255, 0.9); 
+            margin-bottom: var(--spacing-xl); 
+            line-height: 1.7; 
+            font-style: italic;
+        }
+        .hero-cta { display: flex; gap: var(--spacing-md); flex-wrap: wrap; }
+        .slider-controls { position: absolute; bottom: var(--spacing-lg); right: var(--spacing-lg); z-index: 3; display: flex; gap: var(--spacing-sm); align-items: center; }
+        .slider-dots { display: flex; gap: 16px; }
+        .slider-dot { width: 10px; height: 10px; border-radius: 0; background-color: rgba(255, 255, 255, 0.4); cursor: pointer; transition: var(--transition); border: none; }
+        .slider-dot.active { background-color: white; }
+        .slider-arrow { 
+            width: 48px; 
+            height: 48px; 
+            background-color: transparent; 
+            border: 1px solid rgba(255, 255, 255, 0.5); 
+            cursor: pointer; 
+            transition: var(--transition); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        .slider-arrow:hover { background-color: rgba(255, 255, 255, 0.1); border-color: white; }
+        .slider-arrow svg { width: 24px; height: 24px; stroke: white; }
+        
+        /* Why Us Section - Aesop Style */
+        .why-us { background-color: var(--color-cream); }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-xl); }
+        .feature-card { text-align: left; padding: 0; }
+        .feature-image { width: 100%; height: 280px; object-fit: cover; margin-bottom: var(--spacing-md); filter: sepia(0.1) contrast(0.95); }
+        .feature-number { 
+            font-family: var(--font-sans);
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-sage); 
+            margin-bottom: var(--spacing-xs); 
+        }
+        .feature-title { font-size: 1.25rem; margin-bottom: var(--spacing-xs); color: var(--color-ink); font-weight: 400; }
+        .feature-text { font-size: 1rem; color: var(--color-sage-muted); font-style: italic; }
+        
+        /* About Section - Aesop Style */
+        .about { background-color: var(--color-chamois); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); align-items: center; }
+        .about-image { position: relative; overflow: hidden; }
+        .about-image img { width: 100%; height: 500px; object-fit: cover; filter: sepia(0.15) contrast(0.9); }
+        .about-content h2 { font-size: 2.25rem; margin-bottom: var(--spacing-lg); font-style: italic; }
+        .about-list { margin: var(--spacing-lg) 0; }
+        .about-list li { display: flex; align-items: flex-start; gap: var(--spacing-md); margin-bottom: var(--spacing-md); color: var(--color-ink); font-style: italic; }
+        .about-list svg { width: 24px; height: 24px; stroke: var(--color-sage); flex-shrink: 0; margin-top: 2px; }
+        
+        /* Services Section - Aesop Style */
+        .services { background-color: var(--color-cream); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg); }
+        .service-card { padding: var(--spacing-lg); text-align: left; border: 1px solid rgba(122, 132, 112, 0.2); }
+        .service-image { width: 100%; height: 240px; object-fit: cover; margin-bottom: var(--spacing-md); filter: sepia(0.1) contrast(0.95); }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: var(--spacing-sm); font-weight: 400; font-style: italic; }
+        .service-link { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: var(--spacing-xs); 
+            color: var(--color-sage); 
+            font-family: var(--font-sans);
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: var(--spacing-md); 
+        }
+        .service-link:hover { gap: var(--spacing-sm); color: var(--color-ink); }
+        .service-link svg { width: 20px; height: 20px; stroke: var(--color-sage); transition: var(--transition); }
+        
+        /* Blog Section - Aesop Style */
+        .blog { background-color: var(--color-chamois); }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--spacing-lg); }
+        .blog-card { padding: 0; overflow: hidden; border: 1px solid rgba(122, 132, 112, 0.2); }
+        .blog-image { height: 220px; overflow: hidden; }
+        .blog-image img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); filter: sepia(0.1) contrast(0.95); }
+        .blog-card:hover .blog-image img { transform: scale(1.03); }
+        .blog-content { padding: var(--spacing-lg); }
+        .blog-category { 
+            display: inline-block; 
+            font-family: var(--font-sans);
+            font-size: 10px; 
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-sage); 
+            margin-bottom: var(--spacing-xs); 
+        }
+        .blog-card h3 { font-size: 1.375rem; margin-bottom: var(--spacing-sm); font-weight: 400; font-style: italic; }
+        .blog-excerpt { font-size: 1rem; color: var(--color-sage-muted); margin-bottom: var(--spacing-md); font-style: italic; }
+        .blog-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            font-family: var(--font-sans);
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-sage);
+            margin-top: var(--spacing-sm);
+        }
+        .blog-link:hover { color: var(--color-ink); gap: var(--spacing-sm); }
+        
+        /* Contact Section - Aesop Style */
+        .contact { background-color: var(--color-ink); color: var(--color-cream); }
+        .contact .section-title, .contact .section-subtitle { color: var(--color-cream); }
+        .contact .section-subtitle { opacity: 0.7; font-style: italic; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); align-items: start; }
+        .contact-info h3 { color: var(--color-cream); font-size: 1.75rem; margin-bottom: var(--spacing-lg); font-style: italic; }
+        .contact-details { margin: var(--spacing-xl) 0; }
+        .contact-item { display: flex; align-items: flex-start; gap: var(--spacing-md); margin-bottom: var(--spacing-lg); }
+        .contact-item svg { width: 24px; height: 24px; stroke: var(--color-sage); flex-shrink: 0; }
+        .contact-item p { color: rgba(240, 237, 228, 0.8); margin: 0; font-style: italic; }
+        .social-links { display: flex; gap: var(--spacing-sm); }
+        .social-link { width: 44px; height: 44px; border: 1px solid rgba(255, 255, 255, 0.3); display: flex; align-items: center; justify-content: center; transition: var(--transition); }
+        .social-link:hover { border-color: var(--color-sage); background-color: var(--color-sage); }
+        .social-link svg { width: 20px; height: 20px; stroke: white; }
+        .contact-form { background-color: var(--color-cream); padding: var(--spacing-xl); border: 1px solid rgba(122, 132, 112, 0.2); }
+        .form-group { margin-bottom: var(--spacing-md); }
+        .form-label { 
+            display: block; 
+            font-family: var(--font-sans);
+            font-weight: 400; 
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-ink); 
+            margin-bottom: var(--spacing-xs); 
+        }
+        .form-input, .form-select, .form-textarea { 
+            width: 100%; 
+            padding: 1rem; 
+            border: 1px solid rgba(122, 132, 112, 0.3); 
+            font-family: var(--font-serif); 
+            font-size: 1rem; 
+            transition: var(--transition); 
+            background-color: white;
+            border-radius: var(--border-radius);
+        }
+        .form-input:focus, .form-select:focus, .form-textarea:focus { 
+            outline: none; 
+            border-color: var(--color-sage); 
+            background-color: white; 
+        }
+        .form-textarea { resize: vertical; min-height: 140px; }
+        .form-submit { 
+            width: 100%; 
+            padding: 1.25rem; 
+            background-color: var(--color-sage); 
+            color: white; 
+            border: 1px solid var(--color-sage);
+            font-family: var(--font-sans);
+            font-weight: 400; 
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer; 
+            transition: var(--transition); 
+            border-radius: var(--border-radius);
+        }
+        .form-submit:hover { background-color: var(--color-ink); border-color: var(--color-ink); }
+        
+        /* Footer - Aesop Style */
+        .footer { background-color: var(--color-ink); color: var(--color-cream); padding: var(--spacing-xxl) 0 var(--spacing-xl); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+        .footer-brand p { color: rgba(240, 237, 228, 0.6); margin-top: var(--spacing-sm); font-size: 1rem; font-style: italic; }
+        .footer-title { 
+            color: var(--color-cream); 
+            font-family: var(--font-sans);
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-md); 
+        }
+        .footer-links { display: flex; flex-direction: column; gap: var(--spacing-sm); }
+        .footer-link { color: rgba(240, 237, 228, 0.6); font-size: 1rem; font-style: italic; }
+        .footer-link:hover { color: var(--color-sage); }
+        .footer-bottom { padding-top: var(--spacing-xl); border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-md); }
+        .footer-copyright { color: rgba(240, 237, 228, 0.4); font-size: 0.875rem; }
+        .footer-legal { display: flex; gap: var(--spacing-lg); }
+        .footer-legal a { color: rgba(240, 237, 228, 0.4); font-size: 0.875rem; }
+        .footer-legal a:hover { color: var(--color-sage); }
+        
+        /* Animations */
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        
+        /* Responsive */
+        @media (max-width: 992px) { 
+            .about-grid, .contact-grid { grid-template-columns: 1fr; } 
+            .about-image { order: -1; } 
+            .footer-grid { grid-template-columns: 1fr 1fr; } 
+        }
+        @media (max-width: 768px) { 
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background-color: var(--color-cream); flex-direction: column; padding: var(--spacing-md); border-bottom: 1px solid rgba(122, 132, 112, 0.2); gap: var(--spacing-sm); } 
+            .nav-links.active { display: flex; } 
+            .mobile-menu-btn { display: block; } 
+            .hero-stats { flex-direction: column; gap: var(--spacing-md); } 
+            .footer-grid { grid-template-columns: 1fr; } 
+            .footer-bottom { flex-direction: column; text-align: center; } 
+            .slider-controls { bottom: var(--spacing-md); right: var(--spacing-md); } 
+        }
+        @media (max-width: 480px) { 
+            .hero-cta { flex-direction: column; } 
+            .btn { width: 100%; } 
+        }
+    </style>
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">BE</div>
+                B.E. 360
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#apropos" class="nav-link">À propos</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="btn btn-primary">Prendre RDV</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section avec Slider -->
+    <section class="hero" id="accueil">
+        <div class="hero-slider">
+            <!-- Slide 1 -->
+            <div class="hero-slide active">
+                <img src="https://images.unsplash.com/photo-1576091160550-217358c7e618?w=1920&q=80" alt="Recherche médicale et laboratoire" loading="eager">
+            </div>
+            <!-- Slide 2 -->
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920&q=80" alt="Équipe médicale en réunion" loading="lazy">
+            </div>
+            <!-- Slide 3 -->
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=1920&q=80" alt="Documentation scientifique et rédaction" loading="lazy">
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content fade-in">
+            <span class="hero-badge">Experts en Medical Copywriting</span>
+            <h1 class="hero-title">Transformez votre expertise médicale en contenus impactants</h1>
+            <p class="hero-subtitle">Gagnez du temps et gagnez en fiabilité. Nos docteurs en pharmacie rédigent, révisent et optimisent vos contenus santé avec une rigueur scientifique absolue et une conformité réglementaire garantie. Livrables en FR, EN, ES.</p>
+            <div class="hero-cta">
+                <a href="#services" class="btn btn-primary">Découvrir nos services</a>
+                <a href="#contact" class="btn btn-secondary">Prendre rendez-vous</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Rédigé par des docteurs en pharmacie</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Langues disponibles (FR, EN, ES)</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Conforme</span>
+                    <span class="stat-label">Exigences ANSM/EMA</span>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-arrow" id="prevSlide" aria-label="Slide précédente">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <div class="slider-dots" id="sliderDots"></div>
+            <button class="slider-arrow" id="nextSlide" aria-label="Slide suivante">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Section Pourquoi Nous Choisir -->
+    <section class="section why-us fade-in">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pourquoi choisir B.E. 360 ?</h2>
+                <p class="section-subtitle">Une expertise unique au service de votre communication santé</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80" alt="Expertise pharmaceutique" class="feature-image" loading="lazy">
+                    <h3 class="feature-title">Expertise Pharmaceutique</h3>
+                    <p class="feature-text">100% de nos contenus sont rédigés par des docteurs en pharmacie diplômés</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Conformité réglementaire" class="feature-image" loading="lazy">
+                    <h3 class="feature-title">Conformité Garantie</h3>
+                    <p class="feature-text">Respect strict des exigences ANSM, EMA et réglementations en vigueur</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Multilinguisme" class="feature-image" loading="lazy">
+                    <h3 class="feature-title">Approche Multilingue</h3>
+                    <p class="feature-text">Livrables professionnels en français, anglais et espagnol</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" alt="Rigueur scientifique" class="feature-image" loading="lazy">
+                    <h3 class="feature-title">Rigueur Scientifique</h3>
+                    <p class="feature-text">Chaque affirmation est sourcée et vérifiée selon les dernières publications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section class="section about fade-in" id="apropos">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Équipe B.E. 360 en réunion" loading="lazy">
+                </div>
+                <div class="about-content">
+                    <h2>Des experts à votre service</h2>
+                    <p>B.E. 360 est une agence de medical copywriting fondée et dirigée par des docteurs en pharmacie. Notre mission : rendre la science accessible sans jamais compromettre la rigueur.</p>
+                    <p>Nous accompagnons les laboratoires pharmaceutiques, les startups healthtech, les institutions de santé et les médias spécialisés dans la création de contenus précis, conformes et engageants.</p>
+                    <ul class="about-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Expertise scientifique validée par des doctorats en pharmacie</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Adaptation du ton selon votre cible (grand public, professionnels, patients)</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Optimisation SEO pour une visibilité maximale sur les moteurs de recherche</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Respect des délais et confidentialité garantie</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Travailler avec nous</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services -->
+    <section class="section services fade-in" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos Services</h2>
+                <p class="section-subtitle">Quatre offres complémentaires pour tous vos besoins en communication santé</p>
+            </div>
+            <div class="services-grid">
+                <div class="card service-card">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" alt="Vulgarisation scientifique" class="service-image" loading="lazy">
+                    <h3>Vulgarisation scientifique</h3>
+                    <p>Transformation de concepts complexes en contenus accessibles pour le grand public, les patients ou vos équipes commerciales.</p>
+                    <a href="#contact" class="service-link">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+                <div class="card service-card">
+                    <img src="https://images.unsplash.com/photo-1456324504439-367cee1b093a?w=600&q=80" alt="Révision et édition scientifique" class="service-image" loading="lazy">
+                    <h3>Révision et édition scientifique</h3>
+                    <p>Vérification, correction et amélioration de vos textes existants pour garantir exactitude, clarté et conformité réglementaire.</p>
+                    <a href="#contact" class="service-link">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+                <div class="card service-card">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Consultation en stratégie de communication" class="service-image" loading="lazy">
+                    <h3>Consultation en stratégie de communication</h3>
+                    <p>Accompagnement personnalisé pour définir votre ligne éditoriale, identifier vos cibles et structurer vos messages clés.</p>
+                    <a href="#contact" class="service-link">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+                <div class="card service-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Contenu Web SEO santé" class="service-image" loading="lazy">
+                    <h3>Contenu Web SEO santé</h3>
+                    <p>Rédaction d'articles de blog, pages de site et newsletters optimisés pour le référencement naturel et l'engagement lecteur.</p>
+                    <a href="#contact" class="service-link">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Blog -->
+    <section class="section blog fade-in" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Notre Blog</h2>
+                <p class="section-subtitle">Articles et insights sur le medical copywriting et la communication santé</p>
+            </div>
+            <div class="blog-grid">
+                <article class="card blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" alt="SEO et santé" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">SEO Santé</span>
+                        <h3>Comment optimiser vos contenus médicaux pour Google sans compromettre la rigueur scientifique ?</h3>
+                        <p class="blog-excerpt">Découvrez les meilleures pratiques pour concilier référencement naturel et exactitude médicale dans vos publications web.</p>
+                        <a href="article-1.html" class="btn btn-secondary">Lire la suite</a>
+                    </div>
+                </article>
+                <article class="card blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-217358c7e618?w=600&q=80" alt="Vulgarisation scientifique" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Vulgarisation</span>
+                        <h3>Les 5 erreurs à éviter quand on vulgarise un concept médical complexe</h3>
+                        <p class="blog-excerpt">Apprenez à rendre la science accessible sans tomber dans la simplification excessive ou la perte de précision.</p>
+                        <a href="article-2.html" class="btn btn-secondary">Lire la suite</a>
+                    </div>
+                </article>
+                <article class="card blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Conformité réglementaire" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Réglementation</span>
+                        <h3>Communication santé : comment respecter les exigences ANSM et EMA en 2025 ?</h3>
+                        <p class="blog-excerpt">Guide pratique pour naviguer dans le paysage réglementaire européen et français de la communication médicale.</p>
+                        <a href="article-3.html" class="btn btn-secondary">Lire la suite</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="section contact fade-in" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Parlons de votre projet</h2>
+                <p class="section-subtitle">Contactez-nous pour un devis personnalisé ou une première consultation</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Une question ? Un besoin spécifique ?</h3>
+                    <p>Nos experts sont à votre écoute pour comprendre vos enjeux et vous proposer la solution la plus adaptée.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <p>Be.health.360@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <p>Paris, France</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nom complet *</label>
+                        <input type="text" id="name" name="name" class="form-input" required placeholder="Votre nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email professionnel *</label>
+                        <input type="email" id="email" name="email" class="form-input" required placeholder="vous@entreprise.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="service" class="form-label">Type de besoin *</label>
+                        <select id="service" name="service" class="form-select" required>
+                            <option value="">Sélectionnez un service</option>
+                            <option value="vulgarisation">Vulgarisation scientifique</option>
+                            <option value="revision">Révision et édition scientifique</option>
+                            <option value="consultation">Consultation en stratégie de communication</option>
+                            <option value="seo">Contenu Web SEO santé</option>
+                            <option value="autre">Autre demande</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" name="message" class="form-textarea" required placeholder="Décrivez votre projet, vos objectifs et votre deadline..."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Envoyer ma demande</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">BE</div>
+                        B.E. 360
+                    </div>
+                    <p>La science au service du bien-être. Experts en medical copywriting dirigés par des docteurs en pharmacie.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#accueil" class="footer-link">Accueil</a></li>
+                        <li><a href="#apropos" class="footer-link">À propos</a></li>
+                        <li><a href="#services" class="footer-link">Services</a></li>
+                        <li><a href="#blog" class="footer-link">Blog</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services" class="footer-link">Vulgarisation scientifique</a></li>
+                        <li><a href="#services" class="footer-link">Révision & édition</a></li>
+                        <li><a href="#services" class="footer-link">Stratégie de communication</a></li>
+                        <li><a href="#services" class="footer-link">Contenu Web SEO</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:Be.health.360@gmail.com" class="footer-link">Be.health.360@gmail.com</a></li>
+                        <li><span class="footer-link">Paris, France</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 B.E. 360. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Fade-in Animation on Scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Hero Slider Functionality
+        const slides = document.querySelectorAll('.hero-slide');
+        const sliderDots = document.getElementById('sliderDots');
+        const prevBtn = document.getElementById('prevSlide');
+        const nextBtn = document.getElementById('nextSlide');
+        let currentSlide = 0;
+        let slideInterval;
+
+        // Create dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.classList.add('slider-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.setAttribute('aria-label', `Aller au slide ${index + 1}`);
+            dot.addEventListener('click', () => goToSlide(index));
+            sliderDots.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.slider-dot');
+
+        function updateSlider() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                dots[index].classList.remove('active');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                    dots[index].classList.add('active');
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            updateSlider();
+            resetInterval();
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            updateSlider();
+            resetInterval();
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            updateSlider();
+            resetInterval();
+        }
+
+        function startInterval() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            startInterval();
+        }
+
+        // Event listeners for slider controls
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Start automatic sliding
+        startInterval();
+
+        // Pause on hover
+        const heroSection = document.querySelector('.hero');
+        heroSection.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        heroSection.addEventListener('mouseleave', startInterval);
+
+        // Contact Form Handling
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation feedback
+            alert('Merci pour votre message ! Nous vous répondrons sous 48 heures ouvrées.');
+            contactForm.reset();
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
