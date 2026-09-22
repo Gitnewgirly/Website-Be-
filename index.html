@@ -185,6 +185,28 @@
             display: flex; 
             align-items: center; 
             gap: var(--spacing-sm); 
+            position: relative;
+        }
+        /* Anneau 360 animé autour du logo */
+        .logo-ring {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border: 2px solid var(--color-sage);
+            border-radius: 50%;
+            top: -5px;
+            left: -5px;
+            animation: rotate360 8s linear infinite;
+            opacity: 0.6;
+        }
+        @keyframes rotate360 {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .logo-image {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
         }
         .logo-icon { 
             width: 40px; 
@@ -244,10 +266,31 @@
         }
         .hero-title { 
             font-size: clamp(2.5rem, 6vw, 3.5rem); 
-            margin-bottom: var(--spacing-md); 
+            margin-bottom: var(--spacing-lg); 
             color: white; 
             font-style: italic;
             font-weight: 400;
+            line-height: 1.2;
+        }
+        /* Animation de défilement des mots */
+        .typing-text {
+            position: relative;
+            display: inline-block;
+            min-width: 200px;
+        }
+        .word {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            white-space: nowrap;
+        }
+        .word.active {
+            opacity: 1;
+            transform: translateY(0);
+            position: relative;
         }
         .hero-subtitle { 
             font-size: 1.125rem; 
@@ -463,8 +506,10 @@
     <header class="header">
         <nav class="nav">
             <a href="index.html" class="logo">
-                <div class="logo-icon">BE</div>
-                B.E. 360
+                <!-- Anneau 360 décoratif -->
+                <div class="logo-ring"></div>
+                <!-- Emplacement pour le logo image -->
+                <img src="logo.png" alt="B.E. 360 Logo" class="logo-image">
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#accueil" class="nav-link">Accueil</a></li>
@@ -500,8 +545,8 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content fade-in">
             <span class="hero-badge">Experts en Medical Copywriting</span>
-            <h1 class="hero-title">Transformez votre expertise médicale en contenus impactants</h1>
-            <p class="hero-subtitle">Gagnez du temps et gagnez en fiabilité. Nos docteurs en pharmacie rédigent, révisent et optimisent vos contenus santé avec une rigueur scientifique absolue et une conformité réglementaire garantie. Livrables en FR, EN, ES.</p>
+            <h1 class="hero-title">La science au service de votre <span class="typing-text"><span class="word active">communication</span><span class="word">stratégie</span><span class="word">marketing</span></span> santé</h1>
+            <p class="hero-subtitle">Gagnez du temps et gagnez en fiabilité. Nos professionnels en santé rédigent, révisent et optimisent vos contenus avec une rigueur scientifique absolue et une conformité réglementaire garantie. Livrables en Anglais et Français.</p>
             <div class="hero-cta">
                 <a href="#services" class="btn btn-primary">Découvrir nos services</a>
                 <a href="#contact" class="btn btn-secondary">Prendre rendez-vous</a>
@@ -509,11 +554,11 @@
             <div class="hero-stats">
                 <div class="stat-item">
                     <span class="stat-number">100%</span>
-                    <span class="stat-label">Rédigé par des docteurs en pharmacie</span>
+                    <span class="stat-label">Rédigé par des professionnels en santé</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">3</span>
-                    <span class="stat-label">Langues disponibles (FR, EN, ES)</span>
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Langues disponibles (Anglais, Français)</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">Conforme</span>
@@ -541,9 +586,9 @@
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80" alt="Expertise pharmaceutique" class="feature-image" loading="lazy">
-                    <h3 class="feature-title">Expertise Pharmaceutique</h3>
-                    <p class="feature-text">100% de nos contenus sont rédigés par des docteurs en pharmacie diplômés</p>
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80" alt="Expertise scientifique" class="feature-image" loading="lazy">
+                    <h3 class="feature-title">Expertise Scientifique</h3>
+                    <p class="feature-text">100% de nos contenus sont rédigés par des professionnels en santé diplômés et passionnés</p>
                 </div>
                 <div class="feature-card">
                     <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Conformité réglementaire" class="feature-image" loading="lazy">
@@ -551,9 +596,9 @@
                     <p class="feature-text">Respect strict des exigences ANSM, EMA et réglementations en vigueur</p>
                 </div>
                 <div class="feature-card">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Multilinguisme" class="feature-image" loading="lazy">
-                    <h3 class="feature-title">Approche Multilingue</h3>
-                    <p class="feature-text">Livrables professionnels en français, anglais et espagnol</p>
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Bilinguisme" class="feature-image" loading="lazy">
+                    <h3 class="feature-title">Approche Bilingue</h3>
+                    <p class="feature-text">Livrables professionnels en français et anglais</p>
                 </div>
                 <div class="feature-card">
                     <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" alt="Rigueur scientifique" class="feature-image" loading="lazy">
@@ -746,10 +791,12 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">
-                        <div class="logo-icon">BE</div>
-                        B.E. 360
+                        <!-- Anneau 360 décoratif -->
+                        <div class="logo-ring"></div>
+                        <!-- Emplacement pour le logo image -->
+                        <img src="logo.png" alt="B.E. 360 Logo" class="logo-image">
                     </div>
-                    <p>La science au service du bien-être. Experts en medical copywriting dirigés par des docteurs en pharmacie.</p>
+                    <p>La science au service du bien-être. Experts en medical copywriting dirigés par des professionnels en santé.</p>
                 </div>
                 <div>
                     <h4 class="footer-title">Navigation</h4>
